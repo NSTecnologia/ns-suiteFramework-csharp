@@ -58,6 +58,7 @@
     public string NFeInutilizacao { get; set; } = "https://nfe.ns.eti.br/nfe/inut";
     public string NFeListarNSNRecs { get; set; } = "https://nfe.ns.eti.br/util/list/nsnrecs";
     public string NFePrevia { get; set; } = "https://nfe.ns.eti.br/util/preview/nfe";
+    public string NFeGerarPDFDeXML { get; set; } = "https://nfe.ns.eti.br/util/generatepdf";
     public string NFeGerarXMLEmissao { get; set; } = "https://nfe.ns.eti.br/util/generatexml";
     public string NFeGerarXMLCancelamento { get; set; } = "https://nfe.ns.eti.br/util/generatecancel";
     public string NFeGerarXMLCorrecao { get; set; } = "https://nfe.ns.eti.br/util/generatecce";

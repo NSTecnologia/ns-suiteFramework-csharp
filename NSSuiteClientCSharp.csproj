@@ -109,6 +109,7 @@
     <Compile Include="src\Requisições\_Genéricas\DownloadReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\EncerrarReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\EnviarEmailReq.cs" />
+    <Compile Include="src\Requisições\_Genéricas\GerarPDFDeXMLReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\IncCondutorReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\InutilizarReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\ListarNSNRecReq.cs" />

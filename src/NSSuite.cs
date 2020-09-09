@@ -1978,7 +1978,33 @@ public class NSSuite
 
         return resposta;
     }
+    public static string gerarPDFDeXML(string modelo, GerarPDFDeXMLReq gerarPDFReq)
+    {
+        string urlGerarPDF;
+        switch (modelo)
+        {
+            case "55":
+                {
+                    urlGerarPDF = Endpoints.NFeGerarPDFDeXML;
+                    break;
+                }
+            default:
+                {
+                    throw new Exception("Não definido endpoint de geração de PDF a partir de XML processado para o modelo " + modelo);
+                }
+        }
 
+        string json = JsonConvert.SerializeObject(gerarPDFReq);
+
+        Genericos.gravarLinhaLog(modelo, "[GERACAO_PDF_DADOS]");
+        Genericos.gravarLinhaLog(modelo, json);
+
+        string resposta = enviaConteudoParaAPI(json, urlGerarPDF, "json");
+
+        Genericos.gravarLinhaLog(modelo, "[GERACAO_PDF_RESPOSTA]");
+        Genericos.gravarLinhaLog(modelo, resposta);
+        return resposta;
+    }
     public static string gerarXMLEmissao(string modelo, string conteudo, string tpConteudo)
     {
         string urlGerarXML;
