@@ -87,6 +87,7 @@
     <Compile Include="src\Requisições\NFCe\EnviarEmailReqNFCe.cs" />
     <Compile Include="src\Requisições\NFCe\Impressao.cs" />
     <Compile Include="src\Requisições\NFCe\InutilizarReqNFCe.cs" />
+    <Compile Include="src\Requisições\NFe\GerarPDFDeXMLReqNFe.cs" />
     <Compile Include="src\Requisições\NFe\CancelarReqNFe.cs" />
     <Compile Include="src\Requisições\NFe\ConsCadReqNFe.cs" />
     <Compile Include="src\Requisições\NFe\ConsSitReqNFe.cs" />
