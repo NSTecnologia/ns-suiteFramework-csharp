@@ -22,7 +22,8 @@
     public string CTeInfGTV { get; set; } = "https://cte.ns.eti.br/cte/gtv";
     public string CTeInutilizacao { get; set; } = "https://cte.ns.eti.br/cte/inut";
     public string CTeListarNSNRecs { get; set; } = "https://cte.ns.eti.br/util/list/nsnrecs";
-
+    public string CTePrevia { get; set; } = "https://cte.ns.eti.br/util/previa/cte";
+    public string CTeOSPrevia { get; set; } = "https://cte.ns.eti.br/util/previa/cteos";
     // MDF-e
     public string MDFeEnvio { get; set; } = "https://mdfe.ns.eti.br/mdfe/issue";
     public string MDFeConsStatusProcessamento { get; set; } = "https://mdfe.ns.eti.br/mdfe/issue/status";
@@ -43,6 +44,7 @@
     public string NFCeConsSit { get; set; } = "https://nfce.ns.eti.br/v1/nfce/status";
     public string NFCeEnvioEmail { get; set; } = "https://nfce.ns.eti.br/v1/util/resendemail";
     public string NFCeInutilizacao { get; set; } = "https://nfce.ns.eti.br/v1/nfce/inut";
+    public string NFCePrevia { get; set; } = "https://nfce.ns.eti.br/v1/util/preview/nfce";
 
     // NF-e
     public string NFeEnvio { get; set; } = "https://nfe.ns.eti.br/nfe/issue";

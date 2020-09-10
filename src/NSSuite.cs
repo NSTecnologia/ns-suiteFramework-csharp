@@ -1529,6 +1529,56 @@ public class NSSuite
         return resposta;
     }
 
+    public static string previaDocumento(string modelo, string tpConteudo, string conteudo)
+    {
+        string urlPrevia;
+        switch (modelo)
+        {
+            case "55":
+                {
+                    urlPrevia = Endpoints.NFePrevia;
+                    break;
+                }
+            case "65":
+                {
+                    urlPrevia = Endpoints.NFCePrevia;
+                    break;
+                }
+            case "57":
+                {
+                    urlPrevia = Endpoints.CTePrevia;
+                    break;
+                }
+            case "67":
+                {
+                    urlPrevia = Endpoints.CTeOSPrevia;
+                    break;
+                }
+            case "58":
+                {
+                    urlPrevia = Endpoints.MDFePrevia;
+                    break;
+                }
+            default:
+                throw new Exception("Não definido endpoint de previa para o modelo " + modelo);
+        }
+        Genericos.gravarLinhaLog(modelo, "[PREVIA_DADOS]");
+        Genericos.gravarLinhaLog(modelo, conteudo);
+
+        string resposta = enviaConteudoParaAPI(conteudo, urlPrevia, tpConteudo);
+
+        Genericos.gravarLinhaLog(modelo, "[PREVIA_RESPOSTA]");
+        Genericos.gravarLinhaLog(modelo, resposta);
+
+        PreviaResp previaResp = JsonConvert.DeserializeObject<PreviaResp>(resposta);
+        if (!previaResp.status.Equals("200"))
+        {
+            string motivo = previaResp.motivo;
+            var erros = previaResp.erros;
+            MessageBox.Show($"{motivo}, o(s) erro(s): {erros}");
+        }
+        return previaResp.pdf;
+    }
     public static string cancelarDocumentoESalvar(string modelo, CancelarReq CancelarReq, DownloadEventoReq DownloadEventoReq, string caminho, string chave, string cnpjEmitente, bool exibeNaTela = false, bool a3 = false)
     {
         string resposta = cancelarDocumento(modelo, CancelarReq, cnpjEmitente, a3);

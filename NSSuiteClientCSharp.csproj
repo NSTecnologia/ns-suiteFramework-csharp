@@ -164,6 +164,7 @@
     <Compile Include="src\Respostas\_Genéricas\IncCondutorResp.cs" />
     <Compile Include="src\Respostas\_Genéricas\InutilizarResp.cs" />
     <Compile Include="src\Respostas\_Genéricas\NaoEmbResp.cs" />
+    <Compile Include="src\Respostas\_Genéricas\PreviaResp.cs" />
     <Compile Include="src\Respostas\_Genéricas\RetEvento.cs" />
     <Compile Include="src\Respostas\_Genéricas\RetornoInut.cs" />
     <Compile Include="src\Retornos\BPe\EmitirSincronoRetBPe.cs" />
