@@ -620,7 +620,7 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public ICMSSN202 ICMSSN202 { get; set; }
         public ICMSSN500 ICMSSN500 { get; set; }
         public ICMSSN900 ICMSSN900 { get; set; }
-        public Icmsufdest ICMSUFDest { get; set; }
+        //public Icmsufdest ICMSUFDest { get; set; }
     }
 
     public class ICMS00
@@ -886,22 +886,26 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string vCredICMSSN { get; set; }
     }
 
+    /* 
+
     public class Icmsufdest
-    {
-        public string vBCUFDest { get; set; }
-        public string vBCFCPUFDest { get; set; }
-        public string pFCPUFDest { get; set; }
-        public string pICMSUFDest { get; set; }
-        public string pICMSInter { get; set; }
-        public string pICMSInterPart { get; set; }
-        public string vFCPUFDest { get; set; }
-        public string vICMSUFDest { get; set; }
-        public string vICMSUFRemet { get; set; }
-    }
+     {
+         public string vBCUFDest { get; set; }
+         public string vBCFCPUFDest { get; set; }
+         public string pFCPUFDest { get; set; }
+         public string pICMSUFDest { get; set; }
+         public string pICMSInter { get; set; }
+         public string pICMSInterPart { get; set; }
+         public string vFCPUFDest { get; set; }
+         public string vICMSUFDest { get; set; }
+         public string vICMSUFRemet { get; set; }
+     }
+
+     */
 
     public class IPI
     {
-        public string clEnq { get; set; }
+        //public string clEnq { get; set; }
         public string CNPJProd { get; set; }
         public string cSelo { get; set; }
         public string qSelo { get; set; }
