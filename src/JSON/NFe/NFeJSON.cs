@@ -56,6 +56,7 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string verProc { get; set; }
         public string dhCont { get; set; }
         public string xJust { get; set; }
+        public string indIntermed { get; set; }
         public List<Nfref> NFref { get; set; }
     }
 
@@ -345,6 +346,12 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string tBand { get; set; }
         public string cAut { get; set; }
         public string tpIntegra { get; set; }
+    }
+    
+    public class InfIntermed
+    {
+        public string CNPJ { get; set; }
+        public string idCadIntTran { get; set; }
     }
 
     public class Infadic
@@ -1063,4 +1070,5 @@ namespace NSSuite_CSharp.src.JSON.NFe
     {
         public string vIPIDevol { get; set; }
     }
+    
 }
