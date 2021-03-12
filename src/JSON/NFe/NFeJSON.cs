@@ -26,6 +26,7 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public Transp transp { get; set; }
         public Cobr cobr { get; set; }
         public Pag pag { get; set; }
+        public InfIntermed infIntermed { get; set; }
         public Infadic infAdic { get; set; }
         public Exporta exporta { get; set; }
         public Compra compra { get; set; }
@@ -52,11 +53,11 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string finNFe { get; set; }
         public string indFinal { get; set; }
         public string indPres { get; set; }
+        public string indIntermed { get; set; }
         public string procEmi { get; set; }
         public string verProc { get; set; }
         public string dhCont { get; set; }
         public string xJust { get; set; }
-        public string indIntermed { get; set; }
         public List<Nfref> NFref { get; set; }
     }
 
