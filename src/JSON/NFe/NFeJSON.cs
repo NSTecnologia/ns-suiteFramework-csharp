@@ -339,6 +339,7 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string tPag { get; set; }
         public string vPag { get; set; }
         public Card card { get; set; }
+	public string indPag { get; set; }
     }
 
     public class Card
