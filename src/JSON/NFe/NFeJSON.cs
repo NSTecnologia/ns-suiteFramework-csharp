@@ -28,9 +28,11 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public Pag pag { get; set; }
         public InfIntermed infIntermed { get; set; }
         public Infadic infAdic { get; set; }
+	public InfSolicNFF infSolicNFF { get; set; }
         public Exporta exporta { get; set; }
         public Compra compra { get; set; }
         public Cana cana { get; set; }
+	public InfRespTec infRespTec { get; set; }
     }
 
     public class Ide
@@ -340,6 +342,7 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string vPag { get; set; }
         public Card card { get; set; }
 	public string indPag { get; set; }
+	public string xPag { get; set; }
     }
 
     public class Card
@@ -363,6 +366,21 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public List<Obscont> obsCont { get; set; }
         public List<Obsfisco> obsFisco { get; set; }
         public List<Procref> procRef { get; set; }
+    }
+
+    public class InfRespTec
+    {
+	public string CNPJ { get; set; }
+	public string xContato { get; set; }
+	public string email { get; set; }
+	public string fone { get; set; }
+	public string idCSRT { get; set; }
+	public string hashCSRT { get; set; }
+    }
+
+    public class InfSolicNFF
+    {
+    	public string xSolic { get; set; }
     }
 
     public class Obscont
@@ -475,6 +493,8 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public List<Arma> arma { get; set; }
         public Comb comb { get; set; }
         public string nRECOPI { get; set; }
+	public InfProdNFF infProdNFF { get; set; }
+	public InfProdEmb infProdEmb { get; set; }
     }
 
     public class Veicprod
@@ -524,6 +544,19 @@ namespace NSSuite_CSharp.src.JSON.NFe
         public string UFCons { get; set; }
         public CIDE CIDE { get; set; }
         public Encerrante encerrante { get; set; }
+    }
+
+    public class InfProdNFF
+    {
+    	public string cProdFisco { get; set; }
+	public string cOperNFF { get; set; }
+    }
+
+    public class InfProdEmb
+    {
+    	public string xEmb { get; set; }
+	public string qVolEmb { get; set; }
+	public string uEmb { get; set; }
     }
 
     public class CIDE
