@@ -9,7 +9,7 @@
     public string BPeNaoEmb { get; set; } = "https://bpe.ns.eti.br/v1/bpe/naoemb";
     public string BPeConsSit { get; set; } = "https://bpe.ns.eti.br/v1/bpe/status";
 
-    // CT-e
+    // CT-e // CTe-OS
     public string CTeEnvio { get; set; } = "https://cte.ns.eti.br/cte/issue";
     public string CTeOSEnvio { get; set; } = "https://cte.ns.eti.br/cte/issueos";
     public string CTeConsStatusProcessamento { get; set; } = "https://cte.ns.eti.br/cte/issueStatus/300";
@@ -24,6 +24,7 @@
     public string CTeListarNSNRecs { get; set; } = "https://cte.ns.eti.br/util/list/nsnrecs";
     public string CTePrevia { get; set; } = "https://cte.ns.eti.br/util/previa/cte";
     public string CTeOSPrevia { get; set; } = "https://cte.ns.eti.br/util/previa/cteos";
+
     // MDF-e
     public string MDFeEnvio { get; set; } = "https://mdfe.ns.eti.br/mdfe/issue";
     public string MDFeConsStatusProcessamento { get; set; } = "https://mdfe.ns.eti.br/mdfe/issue/status";
@@ -65,6 +66,27 @@
     public string NFeGerarXMLCancelamento { get; set; } = "https://nfe.ns.eti.br/util/generatecancel";
     public string NFeGerarXMLCorrecao { get; set; } = "https://nfe.ns.eti.br/util/generatecce";
     public string NFeGerarXMLInut { get; set; } = "https://nfe.ns.eti.br/util/generateinut";
+
+    // NF3e
+
+    public string NF3eEnvio { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/issue";
+    public string NF3eConsStatusProcessamento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/issue/status";
+    public string NF3eDownload { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/get";
+    public string NF3eDownloadEvento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/get/event";
+    public string NF3eCancelamento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/cancel";
+    public string NF3eConsSit { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/status";
+    public string NF3eListarNSNRecs { get; set; } = "https://nf3e.ns.eti.br/v1/util/list/nsnrecs";
+           
+    // GTVes
+           
+    public string GTVeEnvio { get; set; } = "https://gtve.ns.eti.br/v1/gtve/issue";
+    public string GTVeConsStatusProcessamento { get; set; } = "https://gtve.ns.eti.br/v1/gtve/issue/status";
+    public string GTVeDownload { get; set; } = "https://gtve.ns.eti.br/v1/gtve/get";
+    public string GTVeCancelamento { get; set; } = "https://gtve.ns.eti.br/v1/gtve/cancel";
+    public string GTVeDownloadEvento { get; set; } = "https://gtve.ns.eti.br/v1/gtve/get/event";
+    public string GTVeConsSit { get; set; } = "https://gtve.ns.eti.br/v1/gtve/status";
+    public string GTVeListarNSNRecs { get; set; } = "https://gtve.ns.eti.br/v1/util/nsnrecs";
+    public string GTVeImportar { get; set; } = "https://gtve.ns.eti.br/v1/gtve/import";
 
 
 }

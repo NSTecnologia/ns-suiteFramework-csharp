@@ -14,12 +14,15 @@ public class NSSuite
     private static Endpoints Endpoints = new Endpoints();
     private static Parametros Parametros = new Parametros();
 
-    // Esta função envia um conteúdo para uma URL, em requisições do tipo POST
+    // Esta funcao envia um conteúdo para uma URL, em requisicoes do tipo POST
     public static string enviaConteudoParaAPI(string conteudo, string url, string tpConteudo)
     {
         string retorno = "";
+
         var httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+
         httpWebRequest.Method = "POST";
+
         httpWebRequest.Headers["X-AUTH-TOKEN"] = token;
 
         if (tpConteudo == "txt")
@@ -66,19 +69,19 @@ public class NSSuite
                 {
                     case 401:
                         {
-                            MessageBox.Show("Token não enviado ou inválido");
+                            MessageBox.Show("Token nao enviado ou invalido");
                             break;
                         }
 
                     case 403:
                         {
-                            MessageBox.Show("Token sem permissão");
+                            MessageBox.Show("Token sem permissao");
                             break;
                         }
 
                     case 404:
                         {
-                            MessageBox.Show("Não encontrado, verifique o retorno para mais informações");
+                            MessageBox.Show("Nao encontrado, verifique o retorno para mais informacoes");
                             break;
                         }
 
@@ -92,7 +95,6 @@ public class NSSuite
 
         return retorno;
     }
-
 
     // Métodos específicos de BPe
     public static string emitirBPeSincrono(string conteudo, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
@@ -118,7 +120,7 @@ public class NSSuite
         var EmitirRespBPe = JsonConvert.DeserializeObject<EmitirRespBPe>(resposta);
         statusEnvio = EmitirRespBPe.status;
 
-        // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
+        // Testa se o envio foi feito com sucesso (200) ou se e para reconsultar (-6)
         if ((statusEnvio.Equals("200")) || (statusEnvio.Equals("-6")))
         {
             nsNRec = EmitirRespBPe.nsNRec;
@@ -287,7 +289,6 @@ public class NSSuite
 
         return resposta;
     }
-
 
     // Métodos específicos de CTe
     public static string emitirCTeSincrono(string conteudo, string mod, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
@@ -477,7 +478,6 @@ public class NSSuite
 
         return resposta;
     }
-
 
     // Métodos específicos de MDFe
     public static string emitirMDFeSincrono(string conteudo, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
@@ -851,7 +851,6 @@ public class NSSuite
         return retorno;
     }
 
-
     // Métodos específicos de NFe
     public static string emitirNFeSincrono(string conteudo, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
     {
@@ -990,60 +989,346 @@ public class NSSuite
         return retorno;
     }
 
+    // Métodos específicos de NFe
+    public static string emitirNF3eSincrono(string conteudo, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
+    {
+        string statusEnvio, statusConsulta, statusDownload, motivo, nsNRec, chNF3e, cStat, nProt;
+        string retorno, resposta;
+        IList<string> erros = null;
+        string modelo = "66";
+
+        statusEnvio = "";
+        statusConsulta = "";
+        statusDownload = "";
+        motivo = "";
+        nsNRec = "";
+        chNF3e = "";
+        cStat = "";
+        nProt = "";
+
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_INICIO]");
+
+        resposta = emitirDocumento(modelo, conteudo, tpConteudo, CNPJ, a3);
+
+        var EmitirRespNF3e = JsonConvert.DeserializeObject<EmitirRespNF3e>(resposta);
+        statusEnvio = EmitirRespNF3e.status;
+
+        // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
+        if ((statusEnvio == "200") || (statusEnvio == "-6"))
+        {
+            nsNRec = EmitirRespNF3e.nsNRec;
+
+            // É necessário aguardar alguns milisegundos antes de consultar o status de processamento
+            Thread.Sleep(Parametros.TEMPO_ESPERA);
+
+            ConsStatusProcessamentoReqNF3e ConsStatusProcessamentoReqNF3e = new ConsStatusProcessamentoReqNF3e()
+            {
+                CNPJ = CNPJ,
+                nsNRec = nsNRec,
+                tpAmb = tpAmb
+            };
+
+            resposta = consultarStatusProcessamento(modelo, ConsStatusProcessamentoReqNF3e);
+
+            var ConsStatusProcessamentoRespNF3e = JsonConvert.DeserializeObject<ConsStatusProcessamentoRespNF3e>(resposta);
+            statusConsulta = ConsStatusProcessamentoRespNF3e.status;
+
+            // Testa se a consulta foi feita com sucesso (200)
+            if (statusConsulta == "200")
+            {
+                cStat = ConsStatusProcessamentoRespNF3e.cStat;
+
+                // Testa se o cStat é igual a 100 ou 150, pois ambos significam "Autorizado"
+                if ((cStat == "100") || (cStat == "150"))
+                {
+                    chNF3e = ConsStatusProcessamentoRespNF3e.chNF3e;
+
+                    nProt = ConsStatusProcessamentoRespNF3e.nProt;
+
+                    motivo = ConsStatusProcessamentoRespNF3e.xMotivo;
+
+                    DownloadReqNF3e DownloadReqNF3e = new DownloadReqNF3e()
+                    {
+                        chNF3e = chNF3e,
+                        tpAmb = tpAmb,
+                        tpDown = tpDown
+                    };
+
+                    resposta = downloadDocumentoESalvar(modelo, DownloadReqNF3e, caminho, chNF3e + "-procNF3e", exibeNaTela);
+
+                    var DownloadRespNF3e = JsonConvert.DeserializeObject<DownloadRespNF3e>(resposta);
+                    statusDownload = DownloadRespNF3e.status;
+
+                    // Testa se houve problema no download
+                    if (!statusDownload.Equals("200"))
+                    {
+                        motivo = DownloadRespNF3e.motivo;
+                    }
+                }
+                else
+                {
+                    motivo = ConsStatusProcessamentoRespNF3e.xMotivo;
+                }
+
+            }
+            else if (statusConsulta.Equals("-2"))
+            {
+                cStat = ConsStatusProcessamentoRespNF3e.cStat;
+
+                motivo = ConsStatusProcessamentoRespNF3e.erro.xMotivo;
+            }
+            else
+            {
+                motivo = ConsStatusProcessamentoRespNF3e.motivo;
+            }
+        }
+        else if (statusEnvio.Equals("-7"))
+        {
+            motivo = EmitirRespNF3e.motivo;
+
+            nsNRec = EmitirRespNF3e.nsNRec;
+        }
+        else if (statusEnvio.Equals("-4") || statusEnvio.Equals("-2"))
+        {
+            motivo = EmitirRespNF3e.motivo;
+
+            try { erros = EmitirRespNF3e.erros; }
+            catch { }
+        }
+        else if (statusEnvio.Equals("-999") || statusEnvio.Equals("-5"))
+        {
+            motivo = EmitirRespNF3e.erro.xMotivo;
+        }
+        else
+        {
+            try { motivo = EmitirRespNF3e.motivo; }
+            catch { motivo = EmitirRespNF3e.ToString(); }
+        }
+
+        EmitirSincronoRetNF3e EmitirSincronoRetNF3e = new EmitirSincronoRetNF3e()
+        {
+            statusEnvio = statusEnvio,
+            statusConsulta = statusConsulta,
+            statusDownload = statusDownload,
+            cStat = cStat,
+            chNF3e = chNF3e,
+            nProt = nProt,
+            motivo = motivo,
+            nsNRec = nsNRec,
+            erros = erros
+        };
+
+        retorno = JsonConvert.SerializeObject(EmitirSincronoRetNF3e);
+
+        Genericos.gravarLinhaLog(modelo, "[JSON_RETORNO]");
+        Genericos.gravarLinhaLog(modelo, retorno);
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
+
+        return retorno;
+    }
+
+    // Métodos específicos de CTe
+    public static string emitirGTVeSincrono(string conteudo, string mod, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
+    {
+        string statusEnvio, statusConsulta, statusDownload, motivo, nsNRec, chCTe, cStat, nProt;
+        string retorno, resposta;
+        IList<string> erros = null;
+        string modelo = "64";
+        statusEnvio = "";
+        statusConsulta = "";
+        statusDownload = "";
+        motivo = "";
+        nsNRec = "";
+        chCTe = "";
+        cStat = "";
+        nProt = "";
+
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_INICIO]");
+
+        resposta = emitirDocumento(modelo, conteudo, tpConteudo, CNPJ, a3);
+
+        var EmitirRespGTVe = JsonConvert.DeserializeObject<EmitirRespGTVe>(resposta);
+        statusEnvio = EmitirRespGTVe.status;
+
+        // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
+        if (statusEnvio.Equals("200") || statusEnvio.Equals("-6"))
+        {
+            nsNRec = EmitirRespGTVe.nsNRec;
+
+            // É necessário aguardar alguns milisegundos antes de consultar o status de processamento
+            Thread.Sleep(Parametros.TEMPO_ESPERA);
+
+            ConsStatusProcessamentoReqGTVe ConsStatusProcessamentoReqGTVe = new ConsStatusProcessamentoReqGTVe()
+            {
+                CNPJ = CNPJ,
+                nsNRec = nsNRec,
+                tpAmb = tpAmb
+            };
+
+            resposta = consultarStatusProcessamento(modelo, ConsStatusProcessamentoReqGTVe);
+
+            var ConsStatusProcessamentoRespGTVe = JsonConvert.DeserializeObject<ConsStatusProcessamentoRespGTVe>(resposta);
+            statusConsulta = ConsStatusProcessamentoRespGTVe.status;
+
+            // Testa se a consulta foi feita com sucesso (200)
+            if (statusConsulta.Equals("200"))
+            {
+                cStat = ConsStatusProcessamentoRespGTVe.cStat;
+
+                if (cStat.Equals("100") || cStat.Equals("150"))
+                {
+                    chCTe = ConsStatusProcessamentoRespGTVe.chCTe;
+
+                    nProt = ConsStatusProcessamentoRespGTVe.nProt;
+
+                    motivo = ConsStatusProcessamentoRespGTVe.xMotivo;
+
+                    DownloadReqGTVe DownloadReqGTVe = new DownloadReqGTVe()
+                    {
+                        chCTe = chCTe,
+                        CNPJ = CNPJ,
+                        tpAmb = tpAmb,
+                        tpDown = tpDown
+                    };
+
+                    resposta = downloadDocumentoESalvar(modelo, DownloadReqGTVe, caminho, chCTe + "-procCTe", exibeNaTela);
+
+                    var DownloadRespGTVe = JsonConvert.DeserializeObject<DownloadRespGTVe>(resposta);
+
+                    statusDownload = DownloadRespGTVe.status;
+
+                    if (!statusDownload.Equals("200")) motivo = DownloadRespGTVe.motivo;
+                }
+                else
+                {
+                    motivo = ConsStatusProcessamentoRespGTVe.xMotivo;
+                }
+            }
+            else
+            {
+                motivo = ConsStatusProcessamentoRespGTVe.motivo;
+                erros = ConsStatusProcessamentoRespGTVe.erros;
+            }
+        }
+        else if (statusEnvio.Equals("-7"))
+        {
+            motivo = EmitirRespGTVe.motivo;
+            nsNRec = EmitirRespGTVe.nsNRec;
+        }
+        else if (statusEnvio.Equals("-4"))
+        {
+            motivo = EmitirRespGTVe.motivo;
+
+            try
+            {
+                erros = EmitirRespGTVe.erros;
+            }
+            catch { }
+
+        }
+        else if (statusEnvio.Equals("-9"))
+        {
+            motivo = EmitirRespGTVe.erro.xMotivo;
+            cStat = EmitirRespGTVe.erro.cStat;
+        }
+        else
+        {
+            try
+            {
+                motivo = EmitirRespGTVe.motivo;
+            }
+            catch { motivo = EmitirRespGTVe.ToString(); }
+        }
+
+        EmitirSincronoRetGTVe EmitirSincronoRetGTVe = new EmitirSincronoRetGTVe()
+        {
+            statusEnvio = statusEnvio,
+            statusConsulta = statusConsulta,
+            statusDownload = statusDownload,
+            cStat = cStat,
+            chCTe = chCTe,
+            nProt = nProt,
+            motivo = motivo,
+            nsNRec = nsNRec,
+            erros = erros
+        };
+
+        retorno = JsonConvert.SerializeObject(EmitirSincronoRetGTVe);
+
+        Genericos.gravarLinhaLog(modelo, "[JSON_RETORNO]");
+        Genericos.gravarLinhaLog(modelo, retorno);
+        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
+
+        return retorno;
+    }
 
     // Métodos genéricos, compartilhados entre diversas funções
     public static string emitirDocumento(string modelo, string conteudo, string tpConteudo, string cnpjEmitente, bool a3)
     {
         string urlEnvio;
-        string nodo;
+        string node;
 
         switch (modelo)
         {
-            case "63":
+            case "55":
                 {
-                    urlEnvio = Endpoints.BPeEnvio;
-                    nodo = "infBPe";
+                    urlEnvio = Endpoints.NFeEnvio;
+                    node = "infNFe";
                     break;
                 }
 
             case "57":
                 {
                     urlEnvio = Endpoints.CTeEnvio;
-                    nodo = "infCTe";
-                    break;
-                }
-
-            case "67":
-                {
-                    urlEnvio = Endpoints.CTeOSEnvio;
-                    nodo = "infCTe";
+                    node = "infCTe";
                     break;
                 }
 
             case "58":
                 {
                     urlEnvio = Endpoints.MDFeEnvio;
-                    nodo = "infMDFe";
+                    node = "infMDFe";
                     break;
                 }
 
             case "65":
                 {
                     urlEnvio = Endpoints.NFCeEnvio;
-                    nodo = "infNFe";
+                    node = "infNFe";
                     break;
                 }
 
-            case "55":
+            case "63":
                 {
-                    urlEnvio = Endpoints.NFeEnvio;
-                    nodo = "infNFe";
+                    urlEnvio = Endpoints.BPeEnvio;
+                    node = "infBPe";
+                    break;
+                }
+
+            case "64":
+                {
+                    urlEnvio = Endpoints.BPeEnvio;
+                    node = "infCTe";
+                    break;
+                }
+
+            case "66":
+                {
+                    urlEnvio = Endpoints.BPeEnvio;
+                    node = "infNF3e";
+                    break;
+                }
+
+            case "67":
+                {
+                    urlEnvio = Endpoints.CTeOSEnvio;
+                    node = "infCTe";
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de envio para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de envio para o modelo " + modelo);
                 }
         }
 
@@ -1055,8 +1340,8 @@ public class NSSuite
                 if ("JSON".Equals(tpConteudo.ToUpper()) || "TXT".Equals(tpConteudo.ToUpper()))
                 {
                     string respostaJSON = gerarXMLEmissao(modelo, conteudo, tpConteudo);
-                    dynamic nodoJSON = JsonConvert.DeserializeObject(respostaJSON);
-                    xml = nodoJSON.xml;
+                    dynamic nodeJSON = JsonConvert.DeserializeObject(respostaJSON);
+                    xml = nodeJSON.xml;
                     tpConteudo = "xml";
                 } 
                 else
@@ -1067,11 +1352,11 @@ public class NSSuite
                 X509Certificate2 cert = Genericos.buscaCertificado(cnpjEmitente.Trim());
                 if (cert == null)
                 {
-                    MessageBox.Show("Certificado Digital não encontrado");
+                    MessageBox.Show("Certificado Digital nao encontrado");
                     return null;
                 }
 
-                conteudo = Genericos.assinaXML(xml.Trim(), nodo, cert);
+                conteudo = Genericos.assinaXML(xml.Trim(), node, cert);
 
             }
             catch (Exception ex)
@@ -1098,14 +1383,13 @@ public class NSSuite
 
         switch (modelo)
         {
-            case "63":
+            case "55":
                 {
-                    urlConsulta = Endpoints.BPeConsStatusProcessamento;
+                    urlConsulta = Endpoints.NFeConsStatusProcessamento;
                     break;
                 }
 
             case "57":
-            case "67":
                 {
                     urlConsulta = Endpoints.CTeConsStatusProcessamento;
                     break;
@@ -1117,15 +1401,27 @@ public class NSSuite
                     break;
                 }
 
-            case "55":
+            case "63":
                 {
-                    urlConsulta = Endpoints.NFeConsStatusProcessamento;
+                    urlConsulta = Endpoints.BPeConsStatusProcessamento;
+                    break;
+                }
+
+            case "64":
+                {
+                    urlConsulta = Endpoints.GTVeConsStatusProcessamento;
+                    break;
+                }
+
+            case "66":
+                {
+                    urlConsulta = Endpoints.NF3eConsStatusProcessamento;
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de consulta para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de consulta para o modelo " + modelo);
                 }
         }
 
@@ -1138,6 +1434,7 @@ public class NSSuite
 
         Genericos.gravarLinhaLog(modelo, "[CONSULTA_RESPOSTA]");
         Genericos.gravarLinhaLog(modelo, resposta);
+
         return resposta;
     }
 
@@ -1147,14 +1444,13 @@ public class NSSuite
 
         switch (modelo)
         {
-            case "63":
+            case "55":
                 {
-                    urlDownload = Endpoints.BPeDownload;
+                    urlDownload = Endpoints.NFeDownload;
                     break;
                 }
 
             case "57":
-            case "67":
                 {
                     urlDownload = Endpoints.CTeDownload;
                     break;
@@ -1166,21 +1462,33 @@ public class NSSuite
                     break;
                 }
 
+            case "63":
+                {
+                    urlDownload = Endpoints.BPeDownload;
+                    break;
+                }
+
+            case "64":
+                {
+                    urlDownload = Endpoints.GTVeDownload;
+                    break;
+                }
+
             case "65":
                 {
                     urlDownload = Endpoints.NFCeDownload;
                     break;
                 }
 
-            case "55":
+            case "66":
                 {
-                    urlDownload = Endpoints.NFeDownload;
+                    urlDownload = Endpoints.NF3eDownload;
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de download para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de download para o modelo " + modelo);
                 }
         }
 
@@ -1192,12 +1500,14 @@ public class NSSuite
         string resposta = enviaConteudoParaAPI(json, urlDownload, "json");
 
         string status;
+
         if (!modelo.Equals("65"))
         {
             DownloadResp DownloadResp = new DownloadResp();
             DownloadResp = JsonConvert.DeserializeObject<DownloadResp>(resposta);
             status = DownloadResp.status;
         }
+
         else
         {
             DownloadRespNFCe DownloadRespNFCe = new DownloadRespNFCe();
@@ -1254,7 +1564,6 @@ public class NSSuite
                 throw new Exception("Erro: " + ex.Message);
             }
 
-
             if (!modelo.Equals("65"))
             {
                 // Verifica quais arquivos deve salvar
@@ -1297,16 +1606,15 @@ public class NSSuite
 
         switch (modelo)
         {
-            case "63":
+            case "55":
                 {
-                    urlDownloadEvento = Endpoints.BPeDownloadEvento;
+                    urlDownloadEvento = Endpoints.NFeDownloadEvento;
                     break;
                 }
 
             case "57":
-            case "67":
                 {
-                    urlDownloadEvento = Endpoints.CTeDownloadEvento;
+                    urlDownloadEvento = Endpoints.NFeDownloadEvento;
                     break;
                 }
 
@@ -1316,21 +1624,33 @@ public class NSSuite
                     break;
                 }
 
+            case "63":
+                {
+                    urlDownloadEvento = Endpoints.BPeDownloadEvento;
+                    break;
+                }
+
+            case "64":
+                {
+                    urlDownloadEvento = Endpoints.GTVeDownloadEvento;
+                    break;
+                }
+
             case "65":
                 {
                     urlDownloadEvento = Endpoints.NFCeDownload;
                     break;
                 }
 
-            case "55":
+            case "66":
                 {
-                    urlDownloadEvento = Endpoints.NFeDownloadEvento;
+                    urlDownloadEvento = Endpoints.NF3eDownload;
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de download de evento para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de download de evento para o modelo " + modelo);
                 }
         }
 
@@ -1342,6 +1662,7 @@ public class NSSuite
         string resposta = enviaConteudoParaAPI(json, urlDownloadEvento, "json");
 
         string status;
+
         if (!modelo.Equals("65"))
         {
             DownloadEventoResp DownloadEventoResp = new DownloadEventoResp();
@@ -1409,8 +1730,10 @@ public class NSSuite
             {
                 if (DownloadEventoReq.tpEvento.ToUpper().Equals("CANC"))
                     tpEventoSalvar = "110111";
+
                 else if (DownloadEventoReq.tpEvento.ToUpper().Equals("ENC"))
                     tpEventoSalvar = "110110";
+
                 else
                     tpEventoSalvar = "110115";
 
@@ -1424,6 +1747,7 @@ public class NSSuite
                 if (DownloadEventoReq.tpDown.ToUpper().Contains("P"))
                 {
                     string pdf = DownloadEventoResp.pdf;
+
                     if ((pdf != null) && (pdf != ""))
                     {
                         Genericos.salvarPDF(pdf, caminho, tpEventoSalvar + chave + nSeqEvento + "-procEven");
@@ -1431,6 +1755,7 @@ public class NSSuite
                     }
                 }
             }
+
             else
             {
                 string xml = DownloadRespNFCe.nfeProc.xml;
@@ -1449,18 +1774,17 @@ public class NSSuite
     public static string cancelarDocumento(string modelo, CancelarReq CancelarReq, string cnpjEmitente, bool a3)
     {
         string urlCancelamento;
-        string nodo = "infEvento";
+        string node = "infEvento";
 
         switch (modelo)
         {
-            case "63":
+            case "55":
                 {
-                    urlCancelamento = Endpoints.BPeCancelamento;
+                    urlCancelamento = Endpoints.NFeCancelamento;
                     break;
                 }
 
             case "57":
-            case "67":
                 {
                     urlCancelamento = Endpoints.CTeCancelamento;
                     break;
@@ -1472,21 +1796,33 @@ public class NSSuite
                     break;
                 }
 
+            case "63":
+                {
+                    urlCancelamento = Endpoints.BPeCancelamento;
+                    break;
+                }
+
+            case "64":
+                {
+                    urlCancelamento = Endpoints.GTVeCancelamento;
+                    break;
+                }
+
             case "65":
                 {
                     urlCancelamento = Endpoints.NFCeCancelamento;
                     break;
                 }
 
-            case "55":
+            case "66":
                 {
-                    urlCancelamento = Endpoints.NFeCancelamento;
+                    urlCancelamento = Endpoints.NF3eCancelamento;
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de cancelamento para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de cancelamento para o modelo " + modelo);
                 }
         }
 
@@ -1498,17 +1834,17 @@ public class NSSuite
             try
             {
                 string respostaJSON = gerarXMLCancelamento(modelo, conteudo, "json");
-                dynamic nodoJSON = JsonConvert.DeserializeObject(respostaJSON);
-                xml = nodoJSON.xml;
+                dynamic nodeJSON = JsonConvert.DeserializeObject(respostaJSON);
+                xml = nodeJSON.xml;
 
                 X509Certificate2 cert = Genericos.buscaCertificado(cnpjEmitente.Trim());
                 if (cert == null)
                 {
-                    MessageBox.Show("Certificado Digital não encontrado");
+                    MessageBox.Show("Certificado Digital nao encontrado");
                     return null;
                 }
 
-                conteudo = Genericos.assinaXML(xml.Trim(), nodo, cert);
+                conteudo = Genericos.assinaXML(xml.Trim(), node, cert);
 
             }
             catch (Exception ex)
@@ -1539,29 +1875,37 @@ public class NSSuite
                     urlPrevia = Endpoints.NFePrevia;
                     break;
                 }
-            case "65":
-                {
-                    urlPrevia = Endpoints.NFCePrevia;
-                    break;
-                }
+
             case "57":
                 {
                     urlPrevia = Endpoints.CTePrevia;
                     break;
                 }
-            case "67":
-                {
-                    urlPrevia = Endpoints.CTeOSPrevia;
-                    break;
-                }
+
             case "58":
                 {
                     urlPrevia = Endpoints.MDFePrevia;
                     break;
                 }
+
+            case "65":
+                {
+                    urlPrevia = Endpoints.NFCePrevia;
+                    break;
+                }
+
+            case "67":
+                {
+                    urlPrevia = Endpoints.CTeOSPrevia;
+                    break;
+                }
+
             default:
-                throw new Exception("Não definido endpoint de previa para o modelo " + modelo);
+                {
+                    throw new Exception("Nao definido endpoint de cancelamento para o modelo " + modelo);
+                }
         }
+
         Genericos.gravarLinhaLog(modelo, "[PREVIA_DADOS]");
         Genericos.gravarLinhaLog(modelo, conteudo);
 
@@ -1571,17 +1915,21 @@ public class NSSuite
         Genericos.gravarLinhaLog(modelo, resposta);
 
         PreviaResp previaResp = JsonConvert.DeserializeObject<PreviaResp>(resposta);
+
         if (!previaResp.status.Equals("200"))
         {
             string motivo = previaResp.motivo;
             var erros = previaResp.erros;
             MessageBox.Show($"{motivo}, o(s) erro(s): {erros}");
         }
+
         return previaResp.pdf;
     }
+
     public static string cancelarDocumentoESalvar(string modelo, CancelarReq CancelarReq, DownloadEventoReq DownloadEventoReq, string caminho, string chave, string cnpjEmitente, bool exibeNaTela = false, bool a3 = false)
     {
         string resposta = cancelarDocumento(modelo, CancelarReq, cnpjEmitente, a3);
+
         CancelarResp CancelarResp = new CancelarResp();
         string status;
         string cStat;
@@ -1596,7 +1944,7 @@ public class NSSuite
         }
         else
         {
-            MessageBox.Show("Ocorreu um erro ao cancelar, veja o retorno da API para mais informações");
+            MessageBox.Show("Ocorreu um erro ao cancelar, veja o retorno da API para mais informacoes");
         }
 
         return resposta;
@@ -1605,12 +1953,11 @@ public class NSSuite
     public static string corrigirDocumento(string modelo, CorrigirReq CorrigirReq, string cnpjEmitente, bool a3)
     {
         string urlCCe;
-        string nodo = "infEvento";
+        string node = "infEvento";
 
         switch (modelo)
         {
             case "57":
-            case "67":
                 {
                     urlCCe = Endpoints.CTeCCe;
                     break;
@@ -1624,7 +1971,7 @@ public class NSSuite
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de carta de correção para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de carta de correção para o modelo " + modelo);
                 }
         }
 
@@ -1636,17 +1983,17 @@ public class NSSuite
             try
             {
                 string respostaJSON = gerarXMLCorrecao(modelo, conteudo, "json");
-                dynamic nodoJSON = JsonConvert.DeserializeObject(respostaJSON);
-                xml = nodoJSON.xml;
+                dynamic nodeJSON = JsonConvert.DeserializeObject(respostaJSON);
+                xml = nodeJSON.xml;
 
                 X509Certificate2 cert = Genericos.buscaCertificado(cnpjEmitente.Trim());
                 if (cert == null)
                 {
-                    MessageBox.Show("Certificado Digital não encontrado");
+                    MessageBox.Show("Certificado Digital nao encontrado");
                     return null;
                 }
 
-                conteudo = Genericos.assinaXML(xml.Trim(), nodo, cert);
+                conteudo = Genericos.assinaXML(xml.Trim(), node, cert);
 
             }
             catch (Exception ex)
@@ -1682,7 +2029,7 @@ public class NSSuite
         }
         else
         {
-            MessageBox.Show("Ocorreu um erro ao corrigir, veja o retorno da API para mais informações");
+            MessageBox.Show("Ocorreu um erro ao corrigir, veja o retorno da API para mais informacoes");
         }
 
         return resposta;
@@ -1691,12 +2038,17 @@ public class NSSuite
     public static string inutilizarNumeracao(string modelo, InutilizarReq InutilizarReq, string cnpjEmitente, bool a3)
     {
         string urlInutilizacao;
-        string nodo = "infInut";
+        string node = "infInut";
 
         switch (modelo)
         {
+            case "55":
+                {
+                    urlInutilizacao = Endpoints.NFeInutilizacao;
+                    break;
+                }
+
             case "57":
-            case "67":
                 {
                     urlInutilizacao = Endpoints.CTeInutilizacao;
                     break;
@@ -1708,15 +2060,9 @@ public class NSSuite
                     break;
                 }
 
-            case "55":
-                {
-                    urlInutilizacao = Endpoints.NFeInutilizacao;
-                    break;
-                }
-
             default:
                 {
-                    throw new Exception("Não definido endpoint de inutilização para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de inutilizacao para o modelo " + modelo);
                 }
         }
 
@@ -1725,11 +2071,12 @@ public class NSSuite
         if (a3)
         {
             string xml;
+
             try
             {
                 string respostaJSON = gerarXMLInutilizacao(modelo, conteudo, "json");
-                dynamic nodoJSON = JsonConvert.DeserializeObject(respostaJSON);
-                xml = nodoJSON.xml;
+                dynamic nodeJSON = JsonConvert.DeserializeObject(respostaJSON);
+                xml = nodeJSON.xml;
 
                 X509Certificate2 cert = Genericos.buscaCertificado(cnpjEmitente.Trim());
                 if (cert == null)
@@ -1738,7 +2085,7 @@ public class NSSuite
                     return null;
                 }
 
-                conteudo = Genericos.assinaXML(xml.Trim(), nodo, cert);
+                conteudo = Genericos.assinaXML(xml.Trim(), node, cert);
 
             }
             catch (Exception ex)
@@ -1777,6 +2124,7 @@ public class NSSuite
                     InutilizarRespCTe InutilizarRespCTe = new InutilizarRespCTe();
                     InutilizarRespCTe = JsonConvert.DeserializeObject<InutilizarRespCTe>(resposta);
                     status = InutilizarRespCTe.status;
+
                     if (status.Equals("200"))
                     {
                         string cStat = InutilizarRespCTe.retornoInutCTe.cstat;
@@ -1788,7 +2136,7 @@ public class NSSuite
                     }
                     else
                     {
-                        MessageBox.Show("Ocorreu um erro ao inutilizar a numeração, veja o retorno da API para mais informações");
+                        MessageBox.Show("Ocorreu um erro ao inutilizar a numeracao, veja o retorno da API para mais informacoes");
                     }
                     break;
                 }
@@ -1798,6 +2146,7 @@ public class NSSuite
                     InutilizarRespNFCe InutilizarRespNFCe = new InutilizarRespNFCe();
                     InutilizarRespNFCe = JsonConvert.DeserializeObject<InutilizarRespNFCe>(resposta);
                     status = InutilizarRespNFCe.status;
+
                     if (status.Equals("102"))
                     {
                         string cStat = InutilizarRespNFCe.retInutNFe.cStat;
@@ -1809,7 +2158,7 @@ public class NSSuite
                     }
                     else
                     {
-                        MessageBox.Show("Ocorreu um erro ao inutilizar a numeração, veja o retorno da API para mais informações");
+                        MessageBox.Show("Ocorreu um erro ao inutilizar a numeracao, veja o retorno da API para mais informacoes");
                     }
                     break;
                 }
@@ -1819,6 +2168,7 @@ public class NSSuite
                     InutilizarRespNFe InutilizarRespNFe = new InutilizarRespNFe();
                     InutilizarRespNFe = JsonConvert.DeserializeObject<InutilizarRespNFe>(resposta);
                     status = InutilizarRespNFe.status;
+
                     if (status.Equals("200"))
                     {
                         string cStat = InutilizarRespNFe.retornoInutNFe.cStat;
@@ -1830,14 +2180,14 @@ public class NSSuite
                     }
                     else
                     {
-                        MessageBox.Show("Ocorreu um erro ao inutilizar a numeração, veja o retorno da API para mais informações");
+                        MessageBox.Show("Ocorreu um erro ao inutilizar a numeracao, veja o retorno da API para mais informacoes");
                     }
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Nao existe para este modelo inutilização " + modelo);
+                    throw new Exception("Nao existe para este modelo inutilizacao " + modelo);
                 }
 
         }
@@ -1954,8 +2304,13 @@ public class NSSuite
 
         switch (modelo)
         {
+            case "55":
+                {
+                    urlListarNSNRecs = Endpoints.NFeListarNSNRecs;
+                    break;
+                }
+
             case "57":
-            case "67":
                 {
                     urlListarNSNRecs = Endpoints.CTeListarNSNRecs;
                     break;
@@ -1967,15 +2322,21 @@ public class NSSuite
                     break;
                 }
 
-            case "55":
+            case "64":
                 {
-                    urlListarNSNRecs = Endpoints.NFeListarNSNRecs;
+                    urlListarNSNRecs = Endpoints.GTVeListarNSNRecs;
+                    break;
+                }
+
+            case "66":
+                {
+                    urlListarNSNRecs = Endpoints.GTVeListarNSNRecs;
                     break;
                 }
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de listagem de nsNRec para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de listagem de nsNRec para o modelo " + modelo);
                 }
         }
 
@@ -2012,7 +2373,7 @@ public class NSSuite
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de envio de e-mail para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de envio de e-mail para o modelo " + modelo);
                 }
         }
 
@@ -2028,6 +2389,7 @@ public class NSSuite
 
         return resposta;
     }
+
     public static string gerarPDFDeXML(string modelo, GerarPDFDeXMLReq gerarPDFReq)
     {
         string urlGerarPDF;
@@ -2040,7 +2402,7 @@ public class NSSuite
                 }
             default:
                 {
-                    throw new Exception("Não definido endpoint de geração de PDF a partir de XML processado para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de geracao de PDF a partir de XML processado para o modelo " + modelo);
                 }
         }
 
@@ -2055,6 +2417,7 @@ public class NSSuite
         Genericos.gravarLinhaLog(modelo, resposta);
         return resposta;
     }
+
     public static string gerarXMLEmissao(string modelo, string conteudo, string tpConteudo)
     {
         string urlGerarXML;
@@ -2069,7 +2432,7 @@ public class NSSuite
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de geração de XML de emissão para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de geracao de XML de emissao para o modelo " + modelo);
                 }
         }
         Genericos.gravarLinhaLog(modelo, "[GERACAO_XML_EMISSAO_DADOS]");
@@ -2096,7 +2459,7 @@ public class NSSuite
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de gerar XML de cancelamento para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de gerar XML de cancelamento para o modelo " + modelo);
                 }
         }
         Genericos.gravarLinhaLog(modelo, "[GERACAO_XML_CANCELAMENTO_DADOS]");
@@ -2123,7 +2486,7 @@ public class NSSuite
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de gerar XML de correção para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de gerar XML de correcao para o modelo " + modelo);
                 }
         }
         Genericos.gravarLinhaLog(modelo, "[GERACAO_XML_CORRECAO_DADOS]");
@@ -2150,7 +2513,7 @@ public class NSSuite
 
             default:
                 {
-                    throw new Exception("Não definido endpoint de gerar XML de inutilização para o modelo " + modelo);
+                    throw new Exception("Nao definido endpoint de gerar XML de inutilizacao para o modelo " + modelo);
                 }
         }
         Genericos.gravarLinhaLog(modelo, "[GERACAO_XML_INUTILIZACAO_DADOS]");
