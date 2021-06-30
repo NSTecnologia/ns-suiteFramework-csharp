@@ -1,0 +1,15 @@
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.csprojAssemblyReference.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.frmPrincipal.resources
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.Properties.Resources.resources
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.csproj.GenerateResource.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.csproj.CoreCompileInputs.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\NSSuiteClientCSharp.Forms.exe.config
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\NSSuiteClientCSharp.Forms.exe
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\NSSuiteClientCSharp.Forms.pdb
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\NSSuiteClientCSharp.Library.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\NSSuiteClientCSharp.Library.pdb
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.csproj.CopyComplete
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.exe
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Forms\obj\Debug\NSSuiteClientCSharp.Forms.pdb

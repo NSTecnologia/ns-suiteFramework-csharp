@@ -1,0 +1,17 @@
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\obj\Debug\NSSuiteClientCSharp.Library.csprojAssemblyReference.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\obj\Debug\NSSuiteClientCSharp.Library.csproj.CoreCompileInputs.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\NSSuiteClientCSharp.Library.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\NSSuiteClientCSharp.Library.pdb
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.Permissions.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.Cryptography.Xml.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.Permissions.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\obj\Debug\NSSuiteClientCSharp.Library.csproj.CopyComplete
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\obj\Debug\NSSuiteClientCSharp.Library.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Library\obj\Debug\NSSuiteClientCSharp.Library.pdb

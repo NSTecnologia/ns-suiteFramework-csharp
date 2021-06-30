@@ -1,0 +1,11 @@
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\obj\Debug\NSSuiteClientCSharp.Testes.csprojAssemblyReference.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\obj\Debug\NSSuiteClientCSharp.Testes.csproj.CoreCompileInputs.cache
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\bin\Debug\NSSuiteClientCSharp.Testes.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\bin\Debug\NSSuiteClientCSharp.Testes.pdb
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\bin\Debug\NSSuiteClientCSharp.Library.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\bin\Debug\NSSuiteClientCSharp.Library.pdb
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\obj\Debug\NSSuiteClientCSharp.Testes.csproj.CopyComplete
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\obj\Debug\NSSuiteClientCSharp.Testes.dll
+C:\Users\Max.Ferraz\source\repos\NSSuiteClientCSharp\NSSuiteClientCSharp.Testes\obj\Debug\NSSuiteClientCSharp.Testes.pdb

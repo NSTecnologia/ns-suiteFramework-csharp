@@ -1,0 +1,2788 @@
+25/06/2021 14:48 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 14:48 - [ENVIO_DADOS]
+25/06/2021 14:48 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2305",
+        "dhEmi": "2021-06-25T14:48:40-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "0",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "1",
+        "IE": "0170108708"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "IPI": {
+              "cEnq": "341",
+              "IPINT": {
+                "CST": "02"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 14:50 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 14:50 - [ENVIO_DADOS]
+25/06/2021 14:50 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2305",
+        "dhEmi": "2021-06-25T14:50:06-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "0",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "1",
+        "IE": "0170108708"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "IPI": {
+              "cEnq": "341",
+              "IPINT": {
+                "CST": "02"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 14:50 - [ENVIO_RESPOSTA]
+25/06/2021 14:50 - {"status":-100,"motivo":"NFC-e nao autorizada","nfeProc":{"cStat":716,"xMotivo":"Rejeicao: NFC-e em operacao nao destinada a consumidor final"}}
+25/06/2021 14:50 - [JSON_RETORNO]
+25/06/2021 14:50 - {
+  "chNFe": "",
+  "statusEnvio": "-100",
+  "statusConsulta": "",
+  "statusDownload": "",
+  "cStat": "716",
+  "xMotivo": "Rejeicao: NFC-e em operacao nao destinada a consumidor final",
+  "nProt": "",
+  "motivo": "NFC-e nao autorizada",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 14:50 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 14:52 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 14:52 - [ENVIO_DADOS]
+25/06/2021 14:52 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2305",
+        "dhEmi": "2021-06-25T14:52:48-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "1",
+        "IE": "0170108708"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "IPI": {
+              "cEnq": "341",
+              "IPINT": {
+                "CST": "02"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 14:52 - [ENVIO_RESPOSTA]
+25/06/2021 14:52 - {"status":-100,"motivo":"NFC-e nao autorizada","nfeProc":{"cStat":220,"xMotivo":"Rejeicao: Destinatario com identificacao igual a identificacao do emitente"}}
+25/06/2021 14:52 - [JSON_RETORNO]
+25/06/2021 14:52 - {
+  "chNFe": "",
+  "statusEnvio": "-100",
+  "statusConsulta": "",
+  "statusDownload": "",
+  "cStat": "220",
+  "xMotivo": "Rejeicao: Destinatario com identificacao igual a identificacao do emitente",
+  "nProt": "",
+  "motivo": "NFC-e nao autorizada",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 14:52 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 15:04 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 15:04 - [ENVIO_DADOS]
+25/06/2021 15:04 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2305",
+        "dhEmi": "2021-06-25T15:04:51-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CNPJ": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "IPI": {
+              "cEnq": "341",
+              "IPINT": {
+                "CST": "02"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 15:05 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 15:05 - [ENVIO_DADOS]
+25/06/2021 15:05 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2305",
+        "dhEmi": "2021-06-25T15:05:39-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "IPI": {
+              "cEnq": "341",
+              "IPINT": {
+                "CST": "02"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 15:05 - [ENVIO_RESPOSTA]
+25/06/2021 15:05 - {"status":-100,"motivo":"NFC-e nao autorizada","nfeProc":{"cStat":742,"xMotivo":"Rejeicao: NFC-e com grupo do IPI"}}
+25/06/2021 15:05 - [JSON_RETORNO]
+25/06/2021 15:05 - {
+  "chNFe": "",
+  "statusEnvio": "-100",
+  "statusConsulta": "",
+  "statusDownload": "",
+  "cStat": "742",
+  "xMotivo": "Rejeicao: NFC-e com grupo do IPI",
+  "nProt": "",
+  "motivo": "NFC-e nao autorizada",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 15:05 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 15:06 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 15:06 - [ENVIO_DADOS]
+25/06/2021 15:06 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2305",
+        "dhEmi": "2021-06-25T15:06:32-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 15:06 - [ENVIO_RESPOSTA]
+25/06/2021 15:06 - {"status":100,"motivo":"NFC-e autorizada com sucesso","nfeProc":{"nProt":"143210000344842","digVal":"vuLoFHuq7YfvsvuEgKY8UzqmLz8=","cStat":100,"xMotivo":"Autorizado o uso da NF-e","chNFe":"43210607364617000135650000000023051004621862","serie":"0","numero":"2305","dhRecbto":"2021-06-25T15:06:37-03:00"},"xml":"<?xml version=\"1.0\" encoding=\"utf-8\"?><nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\"><NFe><infNFe versao=\"4.00\" Id=\"NFe43210607364617000135650000000023051004621862\"><ide><cUF>43</cUF><cNF>00462186</cNF><natOp>VENDA A PRAZO - S</natOp><mod>65</mod><serie>0</serie><nNF>2305</nNF><dhEmi>2021-06-25T15:06:32-03:00</dhEmi><tpNF>1</tpNF><idDest>1</idDest><cMunFG>4305108</cMunFG><tpImp>4</tpImp><tpEmis>1</tpEmis><cDV>2</cDV><tpAmb>2</tpAmb><finNFe>1</finNFe><indFinal>1</indFinal><indPres>1</indPres><procEmi>0</procEmi><verProc>4.00|NS_API</verProc></ide><emit><CNPJ>07364617000135</CNPJ><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderEmit><xLgr>Rua Bento Osvaldo Trisch,777</xLgr><nro>.</nro><xCpl>CX POSTAL 91</xCpl><xBairro>Pendancino</xBairro><cMun>4303509</cMun><xMun>Caxias do Sul</xMun><UF>RS</UF><CEP>95046600</CEP><fone>005432200200</fone></enderEmit><IE>0170108708</IE><CRT>1</CRT></emit><dest><CPF>01229452044</CPF><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderDest><xLgr>AV ANTONIO DURO</xLgr><nro>0</nro><xBairro>OLARIA</xBairro><cMun>4303509</cMun><xMun>CAMAQUA</xMun><UF>RS</UF><CEP>96180000</CEP><cPais>1058</cPais><xPais>BRASIL</xPais></enderDest><indIEDest>9</indIEDest></dest><det nItem=\"1\"><prod><cProd>1440859X1_</cProd><cEAN>SEM GTIN</cEAN><xProd>NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xProd><NCM>87089990</NCM><CEST>0107500</CEST><cBenef>SEM CBENEF</cBenef><CFOP>5101</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>13.50</vUnCom><vProd>13.50</vProd><cEANTrib>SEM GTIN</cEANTrib><uTrib>UN</uTrib><qTrib>1.0000</qTrib><vUnTrib>13.50</vUnTrib><indTot>1</indTot><nItemPed>0</nItemPed></prod><imposto><vTotTrib>0.00</vTotTrib><ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS><PIS><PISAliq><CST>01</CST><vBC>0.00</vBC><pPIS>0.00</pPIS><vPIS>0.00</vPIS></PISAliq></PIS><COFINS><COFINSAliq><CST>01</CST><vBC>0.00</vBC><pCOFINS>0.00</pCOFINS><vCOFINS>0.00</vCOFINS></COFINSAliq></COFINS></imposto></det><total><ICMSTot><vBC>0.00</vBC><vICMS>0.00</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>0.00</vBCST><vST>0.00</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>13.50</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>13.50</vNF><vTotTrib>0.00</vTotTrib></ICMSTot></total><transp><modFrete>9</modFrete></transp><pag><detPag><tPag>01</tPag><vPag>13.50</vPag></detPag><vTroco>0.00</vTroco></pag><infAdic><infCpl>DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005</infCpl></infAdic></infNFe><infNFeSupl><qrCode>https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210607364617000135650000000023051004621862|2|2|1|730002113ff9aa62e6db575bc481b18c2001d050</qrCode><urlChave>www.sefaz.rs.gov.br/nfce/consulta</urlChave></infNFeSupl><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"#NFe43210607364617000135650000000023051004621862\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /><Transform Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>vuLoFHuq7YfvsvuEgKY8UzqmLz8=</DigestValue></Reference></SignedInfo><SignatureValue>ljYHMebwb4UPntNlXj++VpkJBFmySQ3j5/gUKQwXK2g3I5VwnCMtUu0xdLK/5Qr9IzNNEu2/je11mx5vSbuAMOa/auF7glDjzTAp2opeMyH2aivXMZAgPbsx0F/ctZ24S9KDkw/6rhYGO46ihy3apN4ABAy0+tVtBIuHFea57pMPhoHDIFwZrCHRkzLoGlwwN5/fXq9e1RxyoPdLnrZ8kx8mx8Qa+kUawvv/j+CklGP4x9SiGYXNWweAWT8YHcr07wEU6Wwg/HiNu0k3x4OXzEkJ/LlyoR7AU1SjYLHzzDRVlHUMNlyhRTsuHQhyASM59orNqi/HdwPcqzBewTZjfQ==</SignatureValue><KeyInfo><X509Data><X509Certificate>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</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao=\"4.00\"><infProt Id=\"ID143210000344842\"><tpAmb>2</tpAmb><verAplic>RSnfce202103291658</verAplic><chNFe>43210607364617000135650000000023051004621862</chNFe><dhRecbto>2021-06-25T15:06:37-03:00</dhRecbto><nProt>143210000344842</nProt><digVal>vuLoFHuq7YfvsvuEgKY8UzqmLz8=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>"}
+25/06/2021 17:42 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 17:42 - [ENVIO_DADOS]
+25/06/2021 17:42 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2306",
+        "dhEmi": "2021-06-25T17:42:16-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 17:45 - [ENVIO_RESPOSTA]
+25/06/2021 17:45 - 
+25/06/2021 17:49 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 17:49 - [ENVIO_DADOS]
+25/06/2021 17:49 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2306",
+        "dhEmi": "2021-06-25T17:42:16-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 17:50 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 17:50 - [ENVIO_DADOS]
+25/06/2021 17:50 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2306",
+        "dhEmi": "2021-06-25T17:42:16-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 17:52 - [ENVIO_RESPOSTA]
+25/06/2021 17:52 - {"status":-100,"motivo":"NFC-e nao autorizada","nfeProc":{"cStat":539,"xMotivo":"Rejeicao: Duplicidade de NF-e, com diferenca na Chave de Acesso [chNFe:43150807364617000135650000000023061000023069]"}}
+25/06/2021 17:52 - [JSON_RETORNO]
+25/06/2021 17:52 - {
+  "chNFe": "",
+  "statusEnvio": "-100",
+  "statusConsulta": "",
+  "statusDownload": "",
+  "cStat": "539",
+  "xMotivo": "Rejeicao: Duplicidade de NF-e, com diferenca na Chave de Acesso [chNFe:43150807364617000135650000000023061000023069]",
+  "nProt": "",
+  "motivo": "NFC-e nao autorizada",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 17:52 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 17:52 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 17:52 - [ENVIO_DADOS]
+25/06/2021 17:52 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2306",
+        "dhEmi": "2021-06-25T17:42:16-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 17:53 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 17:53 - [ENVIO_DADOS]
+25/06/2021 17:53 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2307",
+        "dhEmi": "2021-06-25T17:53:57-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 17:54 - [ENVIO_RESPOSTA]
+25/06/2021 17:54 - {"status":100,"motivo":"NFC-e autorizada com sucesso","nfeProc":{"nProt":"143210000345300","digVal":"dT7AWpBFMlgnJOvxLL6CBLMLWSM=","cStat":100,"xMotivo":"Autorizado o uso da NF-e","chNFe":"43210607364617000135650000000023071004621867","serie":"0","numero":"2307","dhRecbto":"2021-06-25T17:54:09-03:00"},"xml":"<?xml version=\"1.0\" encoding=\"utf-8\"?><nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\"><NFe><infNFe versao=\"4.00\" Id=\"NFe43210607364617000135650000000023071004621867\"><ide><cUF>43</cUF><cNF>00462186</cNF><natOp>VENDA A PRAZO - S</natOp><mod>65</mod><serie>0</serie><nNF>2307</nNF><dhEmi>2021-06-25T17:53:57-03:00</dhEmi><tpNF>1</tpNF><idDest>1</idDest><cMunFG>4305108</cMunFG><tpImp>4</tpImp><tpEmis>1</tpEmis><cDV>7</cDV><tpAmb>2</tpAmb><finNFe>1</finNFe><indFinal>1</indFinal><indPres>1</indPres><procEmi>0</procEmi><verProc>4.00|NS_API</verProc></ide><emit><CNPJ>07364617000135</CNPJ><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderEmit><xLgr>Rua Bento Osvaldo Trisch,777</xLgr><nro>.</nro><xCpl>CX POSTAL 91</xCpl><xBairro>Pendancino</xBairro><cMun>4303509</cMun><xMun>Caxias do Sul</xMun><UF>RS</UF><CEP>95046600</CEP><fone>005432200200</fone></enderEmit><IE>0170108708</IE><CRT>1</CRT></emit><dest><CPF>01229452044</CPF><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderDest><xLgr>AV ANTONIO DURO</xLgr><nro>0</nro><xBairro>OLARIA</xBairro><cMun>4303509</cMun><xMun>CAMAQUA</xMun><UF>RS</UF><CEP>96180000</CEP><cPais>1058</cPais><xPais>BRASIL</xPais></enderDest><indIEDest>9</indIEDest></dest><det nItem=\"1\"><prod><cProd>1440859X1_</cProd><cEAN>SEM GTIN</cEAN><xProd>NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xProd><NCM>87089990</NCM><CEST>0107500</CEST><cBenef>SEM CBENEF</cBenef><CFOP>5101</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>13.50</vUnCom><vProd>13.50</vProd><cEANTrib>SEM GTIN</cEANTrib><uTrib>UN</uTrib><qTrib>1.0000</qTrib><vUnTrib>13.50</vUnTrib><indTot>1</indTot><nItemPed>0</nItemPed></prod><imposto><vTotTrib>0.00</vTotTrib><ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS><PIS><PISAliq><CST>01</CST><vBC>0.00</vBC><pPIS>0.00</pPIS><vPIS>0.00</vPIS></PISAliq></PIS><COFINS><COFINSAliq><CST>01</CST><vBC>0.00</vBC><pCOFINS>0.00</pCOFINS><vCOFINS>0.00</vCOFINS></COFINSAliq></COFINS></imposto></det><total><ICMSTot><vBC>0.00</vBC><vICMS>0.00</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>0.00</vBCST><vST>0.00</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>13.50</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>13.50</vNF><vTotTrib>0.00</vTotTrib></ICMSTot></total><transp><modFrete>9</modFrete></transp><pag><detPag><tPag>01</tPag><vPag>13.50</vPag></detPag><vTroco>0.00</vTroco></pag><infAdic><infCpl>DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005</infCpl></infAdic></infNFe><infNFeSupl><qrCode>https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210607364617000135650000000023071004621867|2|2|1|1459a2fd0f5162136221aa56315b7db6be20c3c8</qrCode><urlChave>www.sefaz.rs.gov.br/nfce/consulta</urlChave></infNFeSupl><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"#NFe43210607364617000135650000000023071004621867\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /><Transform Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>dT7AWpBFMlgnJOvxLL6CBLMLWSM=</DigestValue></Reference></SignedInfo><SignatureValue>hf8e3EScgBDp6lO2M/3mqh+Ac9g4JWnl1Y4H6awbdDlka56g07Reqd275Tc/fMyDAYRynIWAb182IY7qYFgm0Tq7D4bXXTFxXvyGKOc69CjBdYpPmiXxBB1WCSPZB03fvDoNzcQw3phwg5j/Vq2I3qH6KZ8YjnlZQ0k9YX17ijvRZMJvufj2rc9eQfcqHQcWLSVLRTLHPyEIeDhPpW4h3iYFGdh+g0dhMtE6JGgumipx0Slo9rBYeHL1ah/OppZBWYXvjHZqhxWROQgwQO0FuwVeUShwAsZe34kO2NREvjizfz8zXroXEa1UmSHcV7FlnSgPpXQHBq523agQu3ZQWA==</SignatureValue><KeyInfo><X509Data><X509Certificate>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</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao=\"4.00\"><infProt Id=\"ID143210000345300\"><tpAmb>2</tpAmb><verAplic>RSnfce202103291658</verAplic><chNFe>43210607364617000135650000000023071004621867</chNFe><dhRecbto>2021-06-25T17:54:09-03:00</dhRecbto><nProt>143210000345300</nProt><digVal>dT7AWpBFMlgnJOvxLL6CBLMLWSM=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>"}
+25/06/2021 17:54 - DOWNLOAD_DADOS
+25/06/2021 17:54 - {
+  "chNFe": "43210607364617000135650000000023071004621867",
+  "impressao": {
+    "tipo": "PDF",
+    "ecologica": false,
+    "itemLinhas": "1",
+    "itemDesconto": true,
+    "larguraPapel": "80mm"
+  },
+  "tpAmb": "2"
+}
+25/06/2021 17:55 - DOWNLOAD_RESPOSTA
+25/06/2021 17:55 - {"status":"100","motivo":"Download de NFC-e realizado com sucesso","nfeProc":{"cStat":null,"xMotivo":null,"nProt":"143210000345300","digVal":"dT7AWpBFMlgnJOvxLL6CBLMLWSM=","chNFe":"43210607364617000135650000000023071004621867","serie":"0","numero":"2307","dhRecbto":"2021-06-25T17:54:09-03:00","xml":"<?xml version=\"1.0\" encoding=\"utf-8\"?><nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\"><NFe><infNFe versao=\"4.00\" Id=\"NFe43210607364617000135650000000023071004621867\"><ide><cUF>43</cUF><cNF>00462186</cNF><natOp>VENDA A PRAZO - S</natOp><mod>65</mod><serie>0</serie><nNF>2307</nNF><dhEmi>2021-06-25T17:53:57-03:00</dhEmi><tpNF>1</tpNF><idDest>1</idDest><cMunFG>4305108</cMunFG><tpImp>4</tpImp><tpEmis>1</tpEmis><cDV>7</cDV><tpAmb>2</tpAmb><finNFe>1</finNFe><indFinal>1</indFinal><indPres>1</indPres><procEmi>0</procEmi><verProc>4.00|NS_API</verProc></ide><emit><CNPJ>07364617000135</CNPJ><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderEmit><xLgr>Rua Bento Osvaldo Trisch,777</xLgr><nro>.</nro><xCpl>CX POSTAL 91</xCpl><xBairro>Pendancino</xBairro><cMun>4303509</cMun><xMun>Caxias do Sul</xMun><UF>RS</UF><CEP>95046600</CEP><fone>005432200200</fone></enderEmit><IE>0170108708</IE><CRT>1</CRT></emit><dest><CPF>01229452044</CPF><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderDest><xLgr>AV ANTONIO DURO</xLgr><nro>0</nro><xBairro>OLARIA</xBairro><cMun>4303509</cMun><xMun>CAMAQUA</xMun><UF>RS</UF><CEP>96180000</CEP><cPais>1058</cPais><xPais>BRASIL</xPais></enderDest><indIEDest>9</indIEDest></dest><det nItem=\"1\"><prod><cProd>1440859X1_</cProd><cEAN>SEM GTIN</cEAN><xProd>NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xProd><NCM>87089990</NCM><CEST>0107500</CEST><cBenef>SEM CBENEF</cBenef><CFOP>5101</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>13.50</vUnCom><vProd>13.50</vProd><cEANTrib>SEM GTIN</cEANTrib><uTrib>UN</uTrib><qTrib>1.0000</qTrib><vUnTrib>13.50</vUnTrib><indTot>1</indTot><nItemPed>0</nItemPed></prod><imposto><vTotTrib>0.00</vTotTrib><ICMS><ICMSSN102><orig>0</orig><CSOSN>102</CSOSN></ICMSSN102></ICMS><PIS><PISAliq><CST>01</CST><vBC>0.00</vBC><pPIS>0.00</pPIS><vPIS>0.00</vPIS></PISAliq></PIS><COFINS><COFINSAliq><CST>01</CST><vBC>0.00</vBC><pCOFINS>0.00</pCOFINS><vCOFINS>0.00</vCOFINS></COFINSAliq></COFINS></imposto></det><total><ICMSTot><vBC>0.00</vBC><vICMS>0.00</vICMS><vICMSDeson>0.00</vICMSDeson><vFCP>0.00</vFCP><vBCST>0.00</vBCST><vST>0.00</vST><vFCPST>0.00</vFCPST><vFCPSTRet>0.00</vFCPSTRet><vProd>13.50</vProd><vFrete>0.00</vFrete><vSeg>0.00</vSeg><vDesc>0.00</vDesc><vII>0.00</vII><vIPI>0.00</vIPI><vIPIDevol>0.00</vIPIDevol><vPIS>0.00</vPIS><vCOFINS>0.00</vCOFINS><vOutro>0.00</vOutro><vNF>13.50</vNF><vTotTrib>0.00</vTotTrib></ICMSTot></total><transp><modFrete>9</modFrete></transp><pag><detPag><tPag>01</tPag><vPag>13.50</vPag></detPag><vTroco>0.00</vTroco></pag><infAdic><infCpl>DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005</infCpl></infAdic></infNFe><infNFeSupl><qrCode>https://www.sefaz.rs.gov.br/NFCE/NFCE-COM.aspx?p=43210607364617000135650000000023071004621867|2|2|1|1459a2fd0f5162136221aa56315b7db6be20c3c8</qrCode><urlChave>www.sefaz.rs.gov.br/nfce/consulta</urlChave></infNFeSupl><Signature xmlns=\"http://www.w3.org/2000/09/xmldsig#\"><SignedInfo><CanonicalizationMethod Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /><SignatureMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#rsa-sha1\" /><Reference URI=\"#NFe43210607364617000135650000000023071004621867\"><Transforms><Transform Algorithm=\"http://www.w3.org/2000/09/xmldsig#enveloped-signature\" /><Transform Algorithm=\"http://www.w3.org/TR/2001/REC-xml-c14n-20010315\" /></Transforms><DigestMethod Algorithm=\"http://www.w3.org/2000/09/xmldsig#sha1\" /><DigestValue>dT7AWpBFMlgnJOvxLL6CBLMLWSM=</DigestValue></Reference></SignedInfo><SignatureValue>hf8e3EScgBDp6lO2M/3mqh+Ac9g4JWnl1Y4H6awbdDlka56g07Reqd275Tc/fMyDAYRynIWAb182IY7qYFgm0Tq7D4bXXTFxXvyGKOc69CjBdYpPmiXxBB1WCSPZB03fvDoNzcQw3phwg5j/Vq2I3qH6KZ8YjnlZQ0k9YX17ijvRZMJvufj2rc9eQfcqHQcWLSVLRTLHPyEIeDhPpW4h3iYFGdh+g0dhMtE6JGgumipx0Slo9rBYeHL1ah/OppZBWYXvjHZqhxWROQgwQO0FuwVeUShwAsZe34kO2NREvjizfz8zXroXEa1UmSHcV7FlnSgPpXQHBq523agQu3ZQWA==</SignatureValue><KeyInfo><X509Data><X509Certificate>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</X509Certificate></X509Data></KeyInfo></Signature></NFe><protNFe versao=\"4.00\"><infProt Id=\"ID143210000345300\"><tpAmb>2</tpAmb><verAplic>RSnfce202103291658</verAplic><chNFe>43210607364617000135650000000023071004621867</chNFe><dhRecbto>2021-06-25T17:54:09-03:00</dhRecbto><nProt>143210000345300</nProt><digVal>dT7AWpBFMlgnJOvxLL6CBLMLWSM=</digVal><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e</xMotivo></infProt></protNFe></nfeProc>"},"retEvento":null,"pdf":"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MCA1NTYgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDM2NSAwIDAgMCAwIDAgMCA3MjIgMCA3MjIgMCAwIDAgNzIyIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCA3NzcgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgNTU2IDAgMCAwIDAgMCAwIDAgMCAwIDAgNjEwXT4+CmVuZG9iago2IDAgb2JqCjw8L0tpZHNbMSAwIFJdL1R5cGUvUGFnZXMvQ291bnQgMS9JVFhUKDIuMS43KT4+CmVuZG9iagoxMCAwIG9iago8PC9OYW1lc1soSlJfUEFHRV9BTkNIT1JfMF8xKSA3IDAgUl0+PgplbmRvYmoKMTEgMCBvYmoKPDwvRGVzdHMgMTAgMCBSPj4KZW5kb2JqCjEyIDAgb2JqCjw8L05hbWVzIDExIDAgUi9UeXBlL0NhdGFsb2cvUGFnZXMgNiAwIFIvVmlld2VyUHJlZmVyZW5jZXM8PC9QcmludFNjYWxpbmcvQXBwRGVmYXVsdD4+Pj4KZW5kb2JqCjEzIDAgb2JqCjw8L01vZERhdGUoRDoyMDIxMDYyNTE3NTQzOS0wMycwMCcpL0NyZWF0b3IoSmFzcGVyUmVwb3J0cyBMaWJyYXJ5IHZlcnNpb24gNS42LjEpL0NyZWF0aW9uRGF0ZShEOjIwMjEwNjI1MTc1NDM5LTAzJzAwJykvUHJvZHVjZXIoaVRleHQgMi4xLjcgYnkgMVQzWFQpPj4KZW5kb2JqCnhyZWYKMCAxNAowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDI3NDQgMDAwMDAgbiAKMDAwMDAwMzA1MiAwMDAwMCBuIAowMDAwMDMzNjkyIDAwMDAwIG4gCjAwMDAwMDAwMTUgMDAwMDAgbiAKMDAwMDAwMTE5MSAwMDAwMCBuIAowMDAwMDM0NDE4IDAwMDAwIG4gCjAwMDAwMDMwMTcgMDAwMDAgbiAKMDAwMDAwMzE0MCAwMDAwMCBuIAowMDAwMDMzNTAzIDAwMDAwIG4gCjAwMDAwMzQ0ODEgMDAwMDAgbiAKMDAwMDAzNDUzNiAwMDAwMCBuIAowMDAwMDM0NTcwIDAwMDAwIG4gCjAwMDAwMzQ2NzUgMDAwMDAgbiAKdHJhaWxlcgo8PC9JbmZvIDEzIDAgUi9JRCBbPDcxYTA2MDZkY2E3MTM2MjNkNDJmZGM0OWI2NmU1YjBlPjxhYzZiYzY1MjY1NjE1Y2QyMzk4MWU2MDFkZWQxZjk0Mz5dL1Jvb3QgMTIgMCBSL1NpemUgMTQ+PgpzdGFydHhyZWYKMzQ4NDMKJSVFT0YK","pdfCancelamento":null,"escpos":null}
+25/06/2021 17:55 - [JSON_RETORNO]
+25/06/2021 17:55 - {
+  "chNFe": "43210607364617000135650000000023071004621867",
+  "statusEnvio": "100",
+  "statusConsulta": "",
+  "statusDownload": "100",
+  "cStat": "100",
+  "xMotivo": "",
+  "nProt": "143210000345300",
+  "motivo": "Download de NFC-e realizado com sucesso",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 17:55 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 18:00 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 18:00 - [ENVIO_DADOS]
+25/06/2021 18:00 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2307",
+        "dhEmi": "2021-06-25T17:53:57-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 18:00 - [ENVIO_RESPOSTA]
+25/06/2021 18:00 - {"status":-100,"motivo":"NFC-e nao autorizada","nfeProc":{"cStat":204,"xMotivo":"Rejeicao: Duplicidade de NF-e [chNFe:43210607364617000135650000000023071004621867][nProt:143210000345300]"}}
+25/06/2021 18:00 - [JSON_RETORNO]
+25/06/2021 18:00 - {
+  "chNFe": "",
+  "statusEnvio": "-100",
+  "statusConsulta": "",
+  "statusDownload": "",
+  "cStat": "204",
+  "xMotivo": "Rejeicao: Duplicidade de NF-e [chNFe:43210607364617000135650000000023071004621867][nProt:143210000345300]",
+  "nProt": "",
+  "motivo": "NFC-e nao autorizada",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 18:00 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 18:02 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 18:02 - [ENVIO_DADOS]
+25/06/2021 18:02 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2308",
+        "dhEmi": "2021-06-25T18:02:00-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 18:02 - [ENVIO_RESPOSTA]
+25/06/2021 18:02 - {"status":-100,"motivo":"NFC-e nao autorizada","nfeProc":{"cStat":539,"xMotivo":"Rejeicao: Duplicidade de NF-e, com diferenca na Chave de Acesso [chNFe:43150807364617000135650000000023081000023080]"}}
+25/06/2021 18:02 - [JSON_RETORNO]
+25/06/2021 18:02 - {
+  "chNFe": "",
+  "statusEnvio": "-100",
+  "statusConsulta": "",
+  "statusDownload": "",
+  "cStat": "539",
+  "xMotivo": "Rejeicao: Duplicidade de NF-e, com diferenca na Chave de Acesso [chNFe:43150807364617000135650000000023081000023080]",
+  "nProt": "",
+  "motivo": "NFC-e nao autorizada",
+  "nsNRec": "",
+  "erros": null
+}
+25/06/2021 18:02 - [EMISSAO_NFCE_SINCRONA_FIM]
+25/06/2021 18:02 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 18:02 - [ENVIO_DADOS]
+25/06/2021 18:02 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2309",
+        "dhEmi": "2021-06-25T18:02:55-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
+25/06/2021 18:05 - [EMISSAO_NFE_SINCRONA_INICIO]
+25/06/2021 18:05 - [ENVIO_DADOS]
+25/06/2021 18:05 - {
+  "NFe": {
+    "infNFe": {
+      "ide": {
+        "cUF": "43",
+        "cNF": "00462186",
+        "natOp": "VENDA A PRAZO - S",
+        "mod": "65",
+        "serie": "0",
+        "nNF": "2310",
+        "dhEmi": "2021-06-25T18:05:29-03:00",
+        "tpNF": "1",
+        "idDest": "1",
+        "cMunFG": "4305108",
+        "tpImp": "4",
+        "tpEmis": "1",
+        "tpAmb": "2",
+        "finNFe": "1",
+        "indFinal": "1",
+        "indPres": "1",
+        "procEmi": "0",
+        "verProc": "4.00"
+      },
+      "emit": {
+        "CNPJ": "07364617000135",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderEmit": {
+          "xLgr": "Rua Bento Osvaldo Trisch,777",
+          "nro": ".",
+          "xCpl": "CX POSTAL 91",
+          "xBairro": "Pendancino",
+          "cMun": "4303509",
+          "xMun": "Caxias do Sul",
+          "UF": "RS",
+          "CEP": "95046600",
+          "fone": "005432200200"
+        },
+        "IE": "0170108708",
+        "CRT": "1"
+      },
+      "dest": {
+        "CPF": "01229452044",
+        "xNome": "NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+        "enderDest": {
+          "xLgr": "AV ANTONIO DURO",
+          "nro": "0",
+          "xBairro": "OLARIA",
+          "cMun": "4303509",
+          "xMun": "CAMAQUA",
+          "UF": "RS",
+          "CEP": "96180000",
+          "cPais": "1058",
+          "xPais": "BRASIL"
+        },
+        "indIEDest": "9"
+      },
+      "det": [
+        {
+          "prod": {
+            "cProd": "1440859X1_",
+            "cEAN": "SEM GTIN",
+            "xProd": "NOTA FISCAL EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL",
+            "NCM": "87089990",
+            "CEST": "0107500",
+            "cBenef": "SEM CBENEF",
+            "CFOP": "5101",
+            "uCom": "UN",
+            "qCom": "1.0000",
+            "vUnCom": "13.50",
+            "vProd": "13.50",
+            "cEANTrib": "SEM GTIN",
+            "uTrib": "UN",
+            "qTrib": "1.0000",
+            "vUnTrib": "13.50",
+            "indTot": "1",
+            "nItemPed": "0",
+            "detExport": null
+          },
+          "imposto": {
+            "vTotTrib": "0.00",
+            "ICMS": {
+              "ICMSSN102": {
+                "orig": "0",
+                "CSOSN": "102"
+              }
+            },
+            "PIS": {
+              "PISAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pPIS": "0.00",
+                "vPIS": "0.00"
+              },
+              "PISNT": null,
+              "PISOutr": null,
+              "PISQtde": null
+            },
+            "COFINS": {
+              "COFINSAliq": {
+                "CST": "01",
+                "vBC": "0.00",
+                "pCOFINS": "0.00",
+                "vCOFINS": "0.00"
+              },
+              "COFINSNT": null,
+              "COFINSOutr": null,
+              "COFINSQtde": null
+            }
+          },
+          "nItem": "1"
+        }
+      ],
+      "total": {
+        "ICMSTot": {
+          "vBC": "0.00",
+          "vICMS": "0.00",
+          "vICMSDeson": "0.00",
+          "vFCPUFDest": "0.00",
+          "vICMSUFDest": "0.00",
+          "vICMSUFRemet": "0.00",
+          "vFCP": "0.00",
+          "vBCST": "0.00",
+          "vST": "0.00",
+          "vFCPST": "0.00",
+          "vFCPSTRet": "0.00",
+          "vProd": "13.50",
+          "vFrete": "0.00",
+          "vSeg": "0.00",
+          "vDesc": "0.00",
+          "vII": "0.00",
+          "vIPI": "0.00",
+          "vIPIDevol": "0.00",
+          "vPIS": "0.00",
+          "vCOFINS": "0.00",
+          "vOutro": "0.00",
+          "vNF": "13.50",
+          "vTotTrib": "0.00"
+        },
+        "ISSQNtot": null,
+        "retTrib": null
+      },
+      "transp": {
+        "modFrete": "9",
+        "transporta": null,
+        "retTransp": null,
+        "balsa": null,
+        "reboque": null,
+        "vagao": null,
+        "veicTransp": null,
+        "vol": null
+      },
+      "pag": {
+        "detPag": [
+          {
+            "tPag": "01",
+            "vPag": "13.50",
+            "card": null
+          }
+        ],
+        "vTroco": "0.00"
+      },
+      "infAdic": {
+        "infAdFisco": null,
+        "infCpl": "DESCONTO PIS 0,01 COFINS 0,06 LEI 11.196 DE 21/11/2005",
+        "obsCont": null,
+        "obsFisco": null,
+        "procRef": null
+      },
+      "compra": null,
+      "versao": "4.00"
+    }
+  }
+}
