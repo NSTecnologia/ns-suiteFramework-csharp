@@ -9,7 +9,7 @@ namespace NSSuiteClientCSharp.Projetos
 {
     public abstract class NSSuite
     {      
-        private const string _token = "ADQWREQW561D32AWS1D6";
+        private const string _token = "COLOQUE SEU TOKEN AQUI";
         private string EnviaConteudoParaAPI(string conteudo, string url, string tpConteudo = "json", string tpAmb = null)
         {
             string retorno = "";

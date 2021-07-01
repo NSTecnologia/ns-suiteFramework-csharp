@@ -15,7 +15,7 @@ namespace NSSuiteClientCSharp.Projetos
     public class NFCeAPI : NSSuite
     {
 
-        public string EmitirNFCeSincrono(LayoutNFe NFCe, string tpDown, string caminho, string tipoImpresao, bool exibirPDF = false, bool a3 = false)
+        public string EmitirNFCeSincrono(LayoutNFe NFCe, string tipoImpresao, string modeloImpEscPos, string caminho, bool exibirPDF = false, bool a3 = false)
         {
             string conteudo;
             string tpConteudo;
@@ -51,9 +51,9 @@ namespace NSSuiteClientCSharp.Projetos
 
             tpAmb = NFCe.infNFe.ide.tpAmb.ToString();
 
-            return EmitirNFCeSincrono(conteudo, tpConteudo, tpAmb, idEmitente, tpDown, caminho, tipoImpresao, exibirPDF, a3);
+            return EmitirNFCeSincrono(conteudo, tpConteudo, tpAmb, idEmitente, caminho, tipoImpresao, modeloImpEscPos, exibirPDF, a3);
         }
-        public string EmitirNFCeSincrono(string conteudo, string tpConteudo, string tpAmb, string cnpjEmitente, string tpDown, string caminho, string tipoImpresao, bool exibirPDF = false, bool a3 = false)
+        public string EmitirNFCeSincrono(string conteudo, string tpConteudo, string tpAmb, string cnpjEmitente, string tipoImpresao, string modeloImpEscPos, string caminho, bool exibirPDF = true, bool a3 = false)
         {
             string statusEnvio = string.Empty;
             string statusConsulta = string.Empty;
@@ -68,7 +68,7 @@ namespace NSSuiteClientCSharp.Projetos
 
             Util.GravarLinhaLog("[EMISSAO_NFE_SINCRONA_INICIO]");
 
-            var respEnvio = EnviarNFCe(conteudo, tpConteudo, a3, cnpjEmitente);
+            var respEnvio = EnviarNFCe(conteudo, tpConteudo, cnpjEmitente, a3);
             statusEnvio = respEnvio.status;
             switch (statusEnvio)
             {
@@ -82,7 +82,7 @@ namespace NSSuiteClientCSharp.Projetos
                             nProt = respEnvio.nfeProc.nProt;
                             motivo = respEnvio.nfeProc.xMotivo;
 
-                            var DownloadRespNFCe = DownloadNFCeESalvar(chNFe, tpAmb, caminho, exibirPDF, tipoImpresao);
+                            var DownloadRespNFCe = DownloadNFCeESalvar(chNFe, tpAmb, caminho, exibirPDF, tipoImpresao, modeloImpEscPos);
                             statusDownload = DownloadRespNFCe.status;
 
                             if (!statusDownload.Equals("200"))
@@ -144,14 +144,14 @@ namespace NSSuiteClientCSharp.Projetos
         }
 
 
-        public EmitirRespNFCe EnviarNFCe(string conteudo, string tpConteudo, bool a3, string cnpjEmitente)
+        public EmitirRespNFCe EnviarNFCe(string conteudo, string tpConteudo, string cnpjEmitente, bool a3)
         {
             string urlEnvio = "https://nfce.ns.eti.br/v1/nfce/issue";
             string resposta = EnviarDocumento(conteudo, tpConteudo, urlEnvio, cnpjEmitente, "infNFe", a3);
             return JsonConvert.DeserializeObject<EmitirRespNFCe>(resposta);
         }
 
-        public DownloadRespNFCe DownloadNFCe(string chNFe, string tpAmb, string tipoImpressao)
+        public DownloadRespNFCe DownloadNFCe(string chNFe, string tpAmb, string tipoImpressao, string modeloImpEscPos)
         {
             var download = new DownloadReqNFCe()
             {
@@ -159,7 +159,8 @@ namespace NSSuiteClientCSharp.Projetos
                 tpAmb = tpAmb,
                 impressao = new Impressao()
                 {
-                    tipo = tipoImpressao
+                    tipo = tipoImpressao,
+                    modMiniImpressora = modeloImpEscPos
                 }
             };
 
@@ -172,9 +173,9 @@ namespace NSSuiteClientCSharp.Projetos
         }
 
 
-        public DownloadRespNFCe DownloadNFCeESalvar(string chNFe, string tpAmb, string caminho, bool exibirPDF = false, string tipoImpressao = "PDF")
+        public DownloadRespNFCe DownloadNFCeESalvar(string chNFe, string tpAmb, string caminho, bool exibirPDF = false, string tipoImpressao = "PDF", string modeloImpEscPos = null)
         {
-            var downloadRespNFCe = DownloadNFCe(chNFe, tpAmb, tipoImpressao);
+            var downloadRespNFCe = DownloadNFCe(chNFe, tpAmb, tipoImpressao, modeloImpEscPos);
             string status = downloadRespNFCe.status;
 
             if (status.Equals("100"))
@@ -194,6 +195,12 @@ namespace NSSuiteClientCSharp.Projetos
                     Util.SalvarPDF(pdf, caminho, nomeArq);
                     if (exibirPDF)
                         Process.Start(caminho + nomeArq + ".pdf");
+                }
+                else
+                {
+                    string xml = downloadRespNFCe.nfeProc.xml;
+                    Util.SalvarXML(xml, caminho, nomeArq);
+                    string escpos = downloadRespNFCe.escpos;
                 }
             }
             else

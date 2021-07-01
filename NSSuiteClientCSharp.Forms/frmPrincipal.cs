@@ -65,12 +65,12 @@ namespace NSSuiteClientCSharp.Forms
                 NFCesExemplo nfceexemplos = new NFCesExemplo();
                 NFCeAPI nfceapi = new NFCeAPI();
                 var tipoicms = cmbTipoICMSNFCe.SelectedItem.ToString();
-                var objetoNFCe = "";
+                var conteudo = "";
                 switch (tipoicms)
                 {
                     case "NotaNFCeICMS102":
                         LayoutNFe nfce102 = nfceexemplos.NotaNFCeICMS102();
-                        objetoNFCe = nfce102.ToJSONString();
+                        conteudo = nfce102.ToJSONString();
                         break;
                     default:
                         break;
@@ -83,7 +83,7 @@ namespace NSSuiteClientCSharp.Forms
 
                 //var resposta = nfceapi.DownloadNFCeESalvar(chNFe, tpAmb, caminho, exibirPDF, tipoImpresao);
 
-                var resposta = nfceapi.EmitirNFCeSincrono(objetoNFCe, "json", "2", "07364617000135", "P", ".\\Notas\\", "", true);
+                var resposta = nfceapi.EmitirNFCeSincrono(conteudo, "json", "2", "07364617000135", "ESCPOS", "BEMATECH MP-4200 TH", ".\\Notas\\", true);
                 txtRetornoAPI.Text = resposta;
             }
         }

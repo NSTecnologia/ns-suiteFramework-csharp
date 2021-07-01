@@ -43,7 +43,12 @@ namespace NSSuiteClientCSharp.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtRetornoAPI = new System.Windows.Forms.TextBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,9 +63,9 @@ namespace NSSuiteClientCSharp.Forms
             this.groupBox1.Controls.Add(this.btnEmitirNFe);
             this.groupBox1.Controls.Add(this.cmbTipoICMS);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 34);
+            this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(868, 265);
+            this.groupBox1.Size = new System.Drawing.Size(868, 322);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -166,7 +171,7 @@ namespace NSSuiteClientCSharp.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(329, 16);
+            this.label1.Location = new System.Drawing.Point(328, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 13);
             this.label1.TabIndex = 1;
@@ -175,7 +180,7 @@ namespace NSSuiteClientCSharp.Forms
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 304);
+            this.label4.Location = new System.Drawing.Point(12, 403);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 13);
             this.label4.TabIndex = 2;
@@ -183,26 +188,59 @@ namespace NSSuiteClientCSharp.Forms
             // 
             // txtRetornoAPI
             // 
-            this.txtRetornoAPI.Location = new System.Drawing.Point(12, 320);
+            this.txtRetornoAPI.Location = new System.Drawing.Point(12, 419);
             this.txtRetornoAPI.Multiline = true;
             this.txtRetornoAPI.Name = "txtRetornoAPI";
-            this.txtRetornoAPI.Size = new System.Drawing.Size(868, 183);
+            this.txtRetornoAPI.Size = new System.Drawing.Size(890, 246);
             this.txtRetornoAPI.TabIndex = 3;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(15, 32);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(891, 360);
+            this.tabControl1.TabIndex = 4;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(883, 334);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Via Objeto";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(883, 334);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Via JSON Gerado";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(902, 515);
+            this.ClientSize = new System.Drawing.Size(908, 672);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.txtRetornoAPI);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.groupBox1);
             this.Name = "frmPrincipal";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +262,9 @@ namespace NSSuiteClientCSharp.Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtRetornoAPI;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
