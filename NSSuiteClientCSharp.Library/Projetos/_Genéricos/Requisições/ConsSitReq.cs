@@ -4,5 +4,6 @@
     {
         public string licencaCnpj { get; set; }
         public string tpAmb { get; set; }
+        public string chNFe { get; set; }
     }
 }

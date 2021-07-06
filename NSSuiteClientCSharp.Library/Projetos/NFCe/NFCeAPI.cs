@@ -3,6 +3,7 @@ using NSSuiteClientCSharp.Projetos._Genéricos.Requisições;
 using NSSuiteClientCSharp.Projetos.Genéricos;
 using NSSuiteClientCSharp.Projetos.NFCe.Requisições;
 using NSSuiteClientCSharp.Projetos.NFe.Requisições;
+using NSSuiteClientCSharp.Projetos.NFe.Respostas;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -144,11 +145,31 @@ namespace NSSuiteClientCSharp.Projetos
         }
 
 
-        public EmitirRespNFCe EnviarNFCe(string conteudo, string tpConteudo, string cnpjEmitente, bool a3)
+        public string CancelamentoNFCe(string conteudo, string tpAmb)
         {
-            string urlEnvio = "https://nfce.ns.eti.br/v1/nfce/issue";
-            string resposta = EnviarDocumento(conteudo, tpConteudo, urlEnvio, cnpjEmitente, "infNFe", a3);
-            return JsonConvert.DeserializeObject<EmitirRespNFCe>(resposta);
+            string urlEnvio = "https://nfce.ns.eti.br/v1/nfce/cancel";
+            string resposta = RequisitarNaAPI("REQUISICAO",conteudo, urlEnvio, "json", tpAmb);
+
+            string retornoEvento = JsonConvert.SerializeObject(resposta, Formatting.Indented);
+            
+            return retornoEvento;
+        }
+
+        public ConsSitRespNFe ConsultarSituacao(string chNFe, string tpAmb, string licencaCNPJ = null, string versao = "4.00")
+        {
+            string urlConsSit = "https://nfe.ns.eti.br/nfe/stats";
+            var json = new ConsSitReqNFe
+            {
+                chNFe = chNFe,
+                tpAmb = tpAmb,
+                versao = versao
+            };
+
+            if (string.IsNullOrEmpty(licencaCNPJ))
+                json.licencaCnpj = licencaCNPJ;
+
+            string resposta = base.ConsultarSituacaoDocumento(json, urlConsSit);
+            return JsonConvert.DeserializeObject<ConsSitRespNFe>(resposta);
         }
 
         public DownloadRespNFCe DownloadNFCe(string chNFe, string tpAmb, string tipoImpressao, string modeloImpEscPos)
@@ -210,6 +231,17 @@ namespace NSSuiteClientCSharp.Projetos
             }
             return downloadRespNFCe;
         }
+
+
+       
+
+        public EmitirRespNFCe EnviarNFCe(string conteudo, string tpConteudo, string cnpjEmitente, bool a3)
+        {
+            string urlEnvio = "https://nfce.ns.eti.br/v1/nfce/issue";
+            string resposta = EnviarDocumento(conteudo, tpConteudo, urlEnvio, cnpjEmitente, "infNFe", a3);
+            return JsonConvert.DeserializeObject<EmitirRespNFCe>(resposta);
+        }
+
 
     }
 }
