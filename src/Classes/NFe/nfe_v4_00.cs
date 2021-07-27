@@ -1,4 +1,4 @@
-﻿namespace NSSuite_CSharp.src.Classes.NFe
+﻿namespace NSSuiteClientCSharp.src.Classes.NFe
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]

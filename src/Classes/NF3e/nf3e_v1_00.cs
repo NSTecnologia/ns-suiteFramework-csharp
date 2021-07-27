@@ -1,4 +1,4 @@
-﻿namespace NSSuite_CSharp.src.Classes.NF3e
+﻿namespace NSSuiteClientCSharp.src.Classes.NF3e
 {
 
     /// <remarks/>
@@ -15,7 +15,7 @@
 
         private TNF3eInfNF3eSupl infNF3eSuplField;
 
-        private SignatureType signatureField;
+        //private SignatureType signatureField;
 
         /// <remarks/>
         public TNF3eInfNF3e infNF3e
@@ -44,18 +44,18 @@
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-        public SignatureType Signature
-        {
-            get
-            {
-                return this.signatureField;
-            }
-            set
-            {
-                this.signatureField = value;
-            }
-        }
+        //[System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+        //public SignatureType Signature
+        //{
+        //    get
+        //    {
+        //        return this.signatureField;
+        //    }
+        //    set
+        //    {
+        //        this.signatureField = value;
+        //    }
+        //}
     }
 
     /// <remarks/>

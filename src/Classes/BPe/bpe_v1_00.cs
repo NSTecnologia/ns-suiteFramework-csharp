@@ -1,4 +1,4 @@
-﻿namespace NSSuite_CSharp.src.Classes.BPe
+﻿namespace NSSuiteClientCSharp.src.Classes.BPe
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
@@ -14,7 +14,7 @@
 
         private TBPeInfBPeSupl infBPeSuplField;
 
-        private SignatureType signatureField;
+        //private SignatureType signatureField;
 
         /// <remarks/>
         public TBPeInfBPe infBPe
@@ -43,18 +43,18 @@
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-        public SignatureType Signature
-        {
-            get
-            {
-                return this.signatureField;
-            }
-            set
-            {
-                this.signatureField = value;
-            }
-        }
+        //[System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+        //public SignatureType Signature
+        //{
+        //    get
+        //    {
+        //        return this.signatureField;
+        //    }
+        //    set
+        //    {
+        //        this.signatureField = value;
+        //    }
+        //}
     }
 
     /// <remarks/>

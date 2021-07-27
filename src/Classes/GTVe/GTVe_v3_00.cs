@@ -1,4 +1,4 @@
-﻿namespace NSSuite_CSharp.src.Classes.GTVe
+﻿namespace NSSuiteClientCSharp.src.Classes.GTVe
 {
 
     /// <remarks/>
@@ -15,7 +15,7 @@
 
         private TGTVeInfCTeSupl infCTeSuplField;
 
-        private SignatureType signatureField;
+        //private SignatureType signatureField;
 
         private string versaoField;
 
@@ -46,18 +46,18 @@
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-        public SignatureType Signature
-        {
-            get
-            {
-                return this.signatureField;
-            }
-            set
-            {
-                this.signatureField = value;
-            }
-        }
+        //[System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+        //public SignatureType Signature
+        //{
+        //    get
+        //    {
+        //        return this.signatureField;
+        //    }
+        //    set
+        //    {
+        //        this.signatureField = value;
+        //    }
+        //}
 
         /// <remarks/>
         [System.Xml.Serialization.XmlAttributeAttribute()]

@@ -1,4 +1,4 @@
-﻿namespace NSSuite_CSharp.src.Classes.NFCe
+﻿namespace NSSuiteClientCSharp.src.Classes.NFCe
 {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "4.8.3928.0")]
@@ -13,7 +13,7 @@
 
         private TNFeInfNFeSupl infNFeSuplField;
 
-        private SignatureType signatureField;
+        //private SignatureType signatureField;
 
         /// <remarks/>
         public TNFeInfNFe infNFe
@@ -42,18 +42,18 @@
         }
 
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
-        public SignatureType Signature
-        {
-            get
-            {
-                return this.signatureField;
-            }
-            set
-            {
-                this.signatureField = value;
-            }
-        }
+        //[System.Xml.Serialization.XmlElementAttribute(Namespace = "http://www.w3.org/2000/09/xmldsig#")]
+        //public SignatureType Signature
+        //{
+        //    get
+        //    {
+        //        return this.signatureField;
+        //    }
+        //    set
+        //    {
+        //        this.signatureField = value;
+        //    }
+        //}
     }
 
     /// <remarks/>
