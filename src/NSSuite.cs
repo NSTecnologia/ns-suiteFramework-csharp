@@ -313,7 +313,7 @@ namespace NSSuiteClientCSharp.src.NSSuite
 
             resposta = emitirDocumento(modelo, conteudo, tpConteudo, CNPJ, a3);
 
-            var EmitirRespCTe = JsonConvert.DeserializeObject<EmitirRespCTe>(resposta);
+            var EmitirRespCTe = JsonConvert.DeserializeObject<EmitirRespCTe>(resposta); // aqui null exception? 
             statusEnvio = EmitirRespCTe.status;
 
             // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
