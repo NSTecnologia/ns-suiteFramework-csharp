@@ -13,10 +13,10 @@ namespace NSSuiteClientCSharp
         static void Main()
         {
             string conteudoCTeXML = LayoutCTe.gerarLayoutCTeXML();
-            string conteudoMDFeXML = LayoutMDFe.gerarLayoutMDFeXML();
-
             string respostaEmissaoCTe = NSSuite.emitirCTeSincrono(conteudoCTeXML, "57", "xml", "07364617000135", "XP", "2", @".\CTe\", true, false);
-            string respostaEmissaoMDFe = NSSuite.emitirMDFeSincrono(conteudoMDFeXML, "xml", "07364617000135", "XP", "2", @".\MDFe\", true, false);
-        } 
+
+            //string conteudoMDFeXML = LayoutMDFe.gerarLayoutMDFeXML();
+            //string respostaEmissaoMDFe = NSSuite.emitirMDFeSincrono(conteudoMDFeXML, "xml", "07364617000135", "XP", "2", @".\MDFe\", true, false);
+        }
     }
 }

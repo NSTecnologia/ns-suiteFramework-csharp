@@ -12,7 +12,7 @@ namespace NSSuiteClientCSharp.src.NSSuite
 {
     public class NSSuite
     {
-        private static string token = "SEU_TOKEN";
+        private static string token = "ADQWREQW561D32AWS1D6";
         private static Endpoints Endpoints = new Endpoints();
         private static Parametros Parametros = new Parametros();
 
