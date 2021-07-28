@@ -783,11 +783,11 @@
 
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("1")]
-        Producao,
+        Item1,
 
         /// <remarks/>
         [System.Xml.Serialization.XmlEnumAttribute("2")]
-        Homologacao,
+        Item2,
     }
 
     /// <remarks/>
