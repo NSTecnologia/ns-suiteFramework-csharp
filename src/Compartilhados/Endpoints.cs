@@ -66,5 +66,14 @@
     public string NFeGerarXMLCorrecao { get; set; } = "https://nfe.ns.eti.br/util/generatecce";
     public string NFeGerarXMLInut { get; set; } = "https://nfe.ns.eti.br/util/generateinut";
 
+    // NF3-e
+    public string NF3eEnvio { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/issue";
+    public string NF3eConsStatusProcessamento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/issue/status";
+    public string NF3eDownload { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/get";
+    public string NF3eDownloadEvento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/get/event";
+    public string NF3eCancelamento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/cancel";
+    public string NF3eConsSit { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/status";
+    public string NF3eListarNSNRecs { get; set; } = "https://nf3e.ns.eti.br/v1/util/list/nsnrecs";
+
 
 }

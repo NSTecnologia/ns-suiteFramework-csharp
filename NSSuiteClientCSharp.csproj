@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>NSSuiteClientCSharp</RootNamespace>
     <AssemblyName>NSSuiteClientCSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -80,6 +81,9 @@
     <Compile Include="src\Requisições\MDFe\EncerrarReqMDFe.cs" />
     <Compile Include="src\Requisições\MDFe\IncCondutorReqMDFe.cs" />
     <Compile Include="src\Requisições\MDFe\ListarNSNRecReqMDFe.cs" />
+    <Compile Include="src\Requisições\NF3e\CancelarReqNF3e.cs" />
+    <Compile Include="src\Requisições\NF3e\DownloadEventoReqNF3e.cs" />
+    <Compile Include="src\Requisições\NF3e\DownloadReqNF3e.cs" />
     <Compile Include="src\Requisições\NFCe\CancelarReqNFCe.cs" />
     <Compile Include="src\Requisições\NFCe\ConsSitReqNFCe.cs" />
     <Compile Include="src\Requisições\NFCe\DownloadEventoReqNFCe.cs" />
@@ -137,6 +141,9 @@
     <Compile Include="src\Respostas\MDFe\EncerrarRespMDFe.cs" />
     <Compile Include="src\Respostas\MDFe\IncCondutorRespMDFe.cs" />
     <Compile Include="src\Respostas\MDFe\RetEventoMDFe.cs" />
+    <Compile Include="src\Respostas\NF3e\CancelarRespNF3e.cs" />
+    <Compile Include="src\Respostas\NF3e\ConsStatusProcessamentoRespNF3e.cs" />
+    <Compile Include="src\Respostas\NF3e\EmitirRespNF3e.cs" />
     <Compile Include="src\Respostas\NFCe\CancelarRespNFCe.cs" />
     <Compile Include="src\Respostas\NFCe\DownloadRespNFCe.cs" />
     <Compile Include="src\Respostas\NFCe\EmitirRespNFCe.cs" />
@@ -170,6 +177,7 @@
     <Compile Include="src\Retornos\BPe\EmitirSincronoRetBPe.cs" />
     <Compile Include="src\Retornos\CTe\EmitirSincronoRetCTe.cs" />
     <Compile Include="src\Retornos\MDFe\EmitirSincronoRetMDFe.cs" />
+    <Compile Include="src\Retornos\NF3e\EmitirSincronoRetNF3e.cs" />
     <Compile Include="src\Retornos\NFCe\EmitirSincronoRetNFCe.cs" />
     <Compile Include="src\Retornos\NFe\EmitirSincronoRetNFe.cs" />
     <Compile Include="src\Retornos\_Genéricas\EmitirSincronoRet.cs" />
