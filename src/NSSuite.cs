@@ -98,6 +98,7 @@ public class NSSuite
         return retorno;
     }
 
+
     // Métodos específicos de BPe
     public static string emitirBPeSincrono(string conteudo, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false, bool a3 = false)
     {
@@ -992,181 +993,6 @@ public class NSSuite
         Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
 
         return retorno;
-    }
-
-    // Métodos específicos de NF3e
-    public static string emitirNF3eSincrono(string conteudo, string tpConteudo, string CNPJ, string tpDown, string tpAmb, string caminho, bool exibeNaTela = false)
-    {
-        string statusEnvio, statusConsulta, statusDownload, motivo, nsNRec, chNF3e, cStat, nProt;
-        string retorno, resposta;
-        IList<string> erros = null;
-        string modelo = "66";
-        bool a3 = false;
-
-        statusEnvio = "";
-        statusConsulta = "";
-        statusDownload = "";
-        motivo = "";
-        nsNRec = "";
-        chNF3e = "";
-        cStat = "";
-        nProt = "";
-
-        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_INICIO_NF3e]");
-
-        resposta = emitirDocumento(modelo, conteudo, tpConteudo, CNPJ, a3);
-
-        var EmitirRespNF3e = JsonConvert.DeserializeObject<EmitirRespNF3e>(resposta);
-        statusEnvio = EmitirRespNF3e.status;
-
-        // Testa se o envio foi feito com sucesso (200) ou se é para reconsultar (-6)
-        if ((statusEnvio == "200") || (statusEnvio == "-6"))
-        {
-            nsNRec = EmitirRespNF3e.nsNRec;
-
-            // É necessário aguardar alguns milisegundos antes de consultar o status de processamento
-            Thread.Sleep(Parametros.TEMPO_ESPERA);
-
-            //Aqui a NF3e poderá usar o mesmo objeto da NFe, pois são os mesmos dados
-            ConsStatusProcessamentoReqNFe ConsStatusProcessamentoReqNFe = new ConsStatusProcessamentoReqNFe()
-            {
-                CNPJ = CNPJ,
-                nsNRec = nsNRec,
-                tpAmb = tpAmb
-            };
-
-            resposta = consultarStatusProcessamento(modelo, ConsStatusProcessamentoReqNFe);
-
-            var ConsStatusProcessamentoRespNF3e = JsonConvert.DeserializeObject<ConsStatusProcessamentoRespNF3e>(resposta);
-            statusConsulta = ConsStatusProcessamentoRespNF3e.status;
-
-            // Testa se a consulta foi feita com sucesso (200)
-            if (statusConsulta == "200")
-            {
-                cStat = ConsStatusProcessamentoRespNF3e.cStat;
-
-                // Testa se o cStat é igual a 100 ou 150, pois ambos significam "Autorizado"
-                if ((cStat == "100") || (cStat == "150"))
-                {
-                    chNF3e = ConsStatusProcessamentoRespNF3e.chNF3e;
-
-                    nProt = ConsStatusProcessamentoRespNF3e.nProt;
-
-                    motivo = ConsStatusProcessamentoRespNF3e.xMotivo;
-
-
-                    DownloadReqNF3e DownloadReqNF3e = new DownloadReqNF3e()
-                    {
-                        chNF3e = chNF3e,
-                        tpAmb = tpAmb,
-                        tpDown = tpDown
-                    };
-
-                    resposta = downloadDocumentoESalvar(modelo, DownloadReqNF3e, caminho, chNF3e + "-procNF3e", exibeNaTela);
-
-                    var DownloadRespNFe = JsonConvert.DeserializeObject<DownloadRespNFe>(resposta);
-                    statusDownload = DownloadRespNFe.status;
-
-                    // Testa se houve problema no download
-                    if (!statusDownload.Equals("200"))
-                    {
-                        motivo = DownloadRespNFe.motivo;
-                    }
-                }
-                else
-                {
-                    motivo = ConsStatusProcessamentoRespNF3e.xMotivo;
-                }
-
-            }
-            else if (statusConsulta.Equals("-2"))
-            {
-                cStat = ConsStatusProcessamentoRespNF3e.cStat;
-
-                motivo = ConsStatusProcessamentoRespNF3e.erro.xMotivo;
-            }
-            else
-            {
-                motivo = ConsStatusProcessamentoRespNF3e.motivo;
-            }
-        }
-        else if (statusEnvio.Equals("-7"))
-        {
-            motivo = EmitirRespNF3e.motivo;
-
-            nsNRec = EmitirRespNF3e.nsNRec;
-        }
-        else if (statusEnvio.Equals("-4") || statusEnvio.Equals("-2"))
-        {
-            motivo = EmitirRespNF3e.motivo;
-
-            try { erros = EmitirRespNF3e.erros; }
-            catch { }
-        }
-        else if (statusEnvio.Equals("-999") || statusEnvio.Equals("-5"))
-        {
-            motivo = EmitirRespNF3e.erro.xMotivo;
-        }
-        else
-        {
-            try { motivo = EmitirRespNF3e.motivo; }
-            catch { motivo = EmitirRespNF3e.ToString(); }
-        }
-
-        EmitirSincronoRetNF3e EmitirSincronoRetNF3e = new EmitirSincronoRetNF3e()
-        {
-            statusEnvio = statusEnvio,
-            statusConsulta = statusConsulta,
-            statusDownload = statusDownload,
-            cStat = cStat,
-            chNF3e = chNF3e,
-            nProt = nProt,
-            motivo = motivo,
-            nsNRec = nsNRec,
-            erros = erros
-        };
-
-        retorno = JsonConvert.SerializeObject(EmitirSincronoRetNF3e);
-
-        Genericos.gravarLinhaLog(modelo, "[JSON_RETORNO]");
-        Genericos.gravarLinhaLog(modelo, retorno);
-        Genericos.gravarLinhaLog(modelo, "[EMISSAO_SINCRONA_FIM]");
-
-        return retorno;
-    }
-
-    //Cancelamento NF3e
-    public static string cancelarNF3eESalvar(string modelo, CancelarReqNF3e CancelarReqNF3e, DownloadEventoReq DownloadEventoReq, string caminho, string cnpjEmitente, bool exibeNaTela = false, bool a3 = false)
-    {
-        //string resposta = cancelarDocumento(modelo, CancelarReqNF3e, cnpjEmitente, a3);
-        string conteudo = JsonConvert.SerializeObject(CancelarReqNF3e);
-        string urlCancNF3e = Endpoints.NF3eCancelamento;
-
-        Genericos.gravarLinhaLog(modelo, "[CANCELAMENTO_DADOS]");
-        Genericos.gravarLinhaLog(modelo, conteudo);
-
-
-        string resposta = enviaConteudoParaAPI(conteudo, urlCancNF3e, "json");
-
-
-        CancelarRespNF3e CancRespNF3e = new CancelarRespNF3e();
-        string status;
-        string cStat;
-        string chNF3e;
-
-        CancRespNF3e = JsonConvert.DeserializeObject<CancelarRespNF3e>(resposta);
-        status = CancRespNF3e.status;
-        chNF3e = CancRespNF3e.chNF3e;
-        if (status.Equals("200") || status.Equals("135"))
-        {
-            cStat = CancRespNF3e.retEvento.cStat;
-            if (cStat.Equals("135")) downloadEventoESalvar(modelo, DownloadEventoReq, caminho, chNF3e, "1", exibeNaTela);
-        }
-        else
-        {
-            MessageBox.Show("Ocorreu um erro ao cancelar a NF3e, veja o retorno da API para mais informações");
-        }
-        return resposta;
     }
 
 
@@ -2345,7 +2171,7 @@ public class NSSuite
 
     public static string consultarIBPT(ConsultaAPIIBPT consApiIBPT)
     {
-        string token = "52-wmOVxfB2Krw2qQNgDAJrrpcfA9dU-UkvticSNGVXoaRuZ4k3smAE-K67WGN7W";
+        string token = "52-wmOVxyB2Krw2pQNgDOJrrpcfA9dU-UkvticSNGVXoaRuZ4k3smAEW-K77WGN7W";
         
         using (var httpClient = new HttpClient())
         {

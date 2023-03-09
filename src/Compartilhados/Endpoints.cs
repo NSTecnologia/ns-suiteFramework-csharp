@@ -66,6 +66,7 @@
     public string NFeGerarXMLCorrecao { get; set; } = "https://nfe.ns.eti.br/util/generatecce";
     public string NFeGerarXMLInut { get; set; } = "https://nfe.ns.eti.br/util/generateinut";
 
+<<<<<<< HEAD
     // NF3-e
     public string NF3eEnvio { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/issue";
     public string NF3eConsStatusProcessamento { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/issue/status";
@@ -78,5 +79,7 @@
     //IBPT
     public string ApiIBTP { get; set; } = "https://apidoni.ibpt.org.br/api/v1/produtos?";
 
+=======
+>>>>>>> parent of 91ce136 (comunicacao NF3e)
 
 }
