@@ -7,6 +7,11 @@ using Newtonsoft.Json;
 using System.Threading;
 using System.Windows.Forms;
 using System.Security.Cryptography.X509Certificates;
+using NSSuiteClientCSharp.src.Requisições._Genéricas;
+using System.Net.Http;
+using System.Web;
+using System.Security.Policy;
+using System.Reflection;
 
 public class NSSuite
 {
@@ -2335,5 +2340,45 @@ public class NSSuite
         Genericos.gravarLinhaLog(modelo, "[GERACAO_XML_INUTILIZACAO_RESPOSTA]");
         Genericos.gravarLinhaLog(modelo, resposta);
         return resposta;
+    }
+
+
+    public static string consultarIBPT(ConsultaAPIIBPT consApiIBPT)
+    {
+        string token = "52-wmOVxfB2Krw2qQNgDAJrrpcfA9dU-UkvticSNGVXoaRuZ4k3smAE-K67WGN7W";
+        
+        using (var httpClient = new HttpClient())
+        {
+            string retorno = "";
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+            queryString["token"] = token;
+            queryString["cnpj"] = consApiIBPT.cnpj;
+            queryString["codigo"] = consApiIBPT.codigo;
+            queryString["uf"] = consApiIBPT.uf;
+            queryString["ex"] = consApiIBPT.ex;
+            queryString["descricao"] = HttpUtility.UrlEncode(consApiIBPT.descricao);
+            queryString["valor"] = consApiIBPT.valor;
+            queryString["gtin"] = HttpUtility.UrlEncode(consApiIBPT.gtin);
+            var requestUri = $"{Endpoints.ApiIBTP}/produtos?{queryString}";
+            Genericos.gravarLinhaLog("", requestUri);
+            var httpWebRequest = (HttpWebRequest)WebRequest.Create(requestUri);
+            httpWebRequest.Method = "GET";
+
+            try
+            {
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    retorno = streamReader.ReadToEnd();
+                }
+            }
+            catch (WebException ex)
+            {
+                throw new Exception("Unexpected error occured", ex);
+            }
+            Genericos.gravarLinhaLog("", retorno);
+            return retorno;
+        }
     }
 }

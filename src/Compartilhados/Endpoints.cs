@@ -75,5 +75,8 @@
     public string NF3eConsSit { get; set; } = "https://nf3e.ns.eti.br/v1/nf3e/status";
     public string NF3eListarNSNRecs { get; set; } = "https://nf3e.ns.eti.br/v1/util/list/nsnrecs";
 
+    //IBPT
+    public string ApiIBTP { get; set; } = "https://apidoni.ibpt.org.br/api/v1/produtos?";
+
 
 }

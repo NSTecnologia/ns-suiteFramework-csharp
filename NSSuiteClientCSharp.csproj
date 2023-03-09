@@ -38,6 +38,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -108,6 +109,7 @@
     <Compile Include="src\Requisições\_Genéricas\ConsSitReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\ConsStatusProcessamentoReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\ConsStatusWS.cs" />
+    <Compile Include="src\Requisições\_Genéricas\ConsultaAPIIBPT.cs" />
     <Compile Include="src\Requisições\_Genéricas\CorrigirReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\DownloadEventoReq.cs" />
     <Compile Include="src\Requisições\_Genéricas\DownloadReq.cs" />
