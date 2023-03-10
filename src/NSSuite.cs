@@ -2171,7 +2171,7 @@ public class NSSuite
 
     public static string consultarIBPT(ConsultaAPIIBPT consApiIBPT)
     {
-        string token = "52-wmOVxyB2Krw2pQNgDOJrrpcfA9dU-UkvticSNGVXoaRuZ4k3smAEW-K77WGN7W";
+        string token = "52-wmOVxyB2Krw2pQNgDOJrrpcfA9dU-UkvqicSNFVXoaRuZ4k3smAEW-K77WGN7W";
         
         using (var httpClient = new HttpClient())
         {
