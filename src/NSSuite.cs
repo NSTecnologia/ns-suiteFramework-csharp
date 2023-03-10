@@ -2185,7 +2185,7 @@ public class NSSuite
             queryString["descricao"] = HttpUtility.UrlEncode(consApiIBPT.descricao);
             queryString["valor"] = consApiIBPT.valor;
             queryString["gtin"] = HttpUtility.UrlEncode(consApiIBPT.gtin);
-            var requestUri = $"{Endpoints.ApiIBTP}/produtos?{queryString}";
+            var requestUri = $"{Endpoints.ApiIBTP}{queryString}";
             Genericos.gravarLinhaLog("", requestUri);
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(requestUri);
             httpWebRequest.Method = "GET";
